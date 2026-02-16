@@ -1,3 +1,12 @@
+_Claude-Opus-4.6 (output effort = high). Feb., 2026._
+
+_I like Claude's alternative 6-stratum model. The additional "near-surface" term is clear and may help subsequent composition/extraction abstractions. I agree that extreme/ultra distinction is ambiguous, but no usable alternative was suggested. Below these we have "lower continental crust", "upper mantel", etc., which we only need to consider for composition display and total planet harvest._
+
+_The follow-up query/answer for ocean floor strata is difficult to use. Maybe keep "ocean floor" and "ocean crust"._
+
+---
+---
+
 I need high level advice for a simulation that focuses on resource streams, energy, and commodity markets. The simulation starts at present-day technology and operations, but runs forward in time and will include highly speculative, yet physically plausible, future technologies and operations (e.g., extraction at depths not currently possible or practical). Abstractions and simplifications are necessary. However, please tell me if my instructions seem too oversimplified or have erroneous assumptions. Ask for clarification if it may help in subsequent queries. Summarize simplifications and important omissions in your analysis. State references and show your work.
 
 The topic for discussion is how to best stratify Earth's surface and subsurface for resource extraction. Extraction includes quarrying, mining and drilling. The simulation requires a common set of strata definitions to use for every kind of extraction. E.g., we need a "surface" stratum that can be used as the layer for "surface mining" and "surface drilling" (the latter term perhaps isn't technically correct, but we need common abstractions here). Resources will be simplified into entities such as "oil", "gas", "coal", "iron ore", "aluminum ore", "uranium ore", "industrial metals ore" (a catchall), "precious metals ore", "rare earths ore", "industrial minerals", "stone" and "regolith".
@@ -5,15 +14,6 @@ The topic for discussion is how to best stratify Earth's surface and subsurface 
 My starting idea is to have strata with the names "surface", "subsurface", "deep", "extreme deep" and "ultra deep". These are intended to be continental strata and may encompass near-offshore to some extent (e.g., for offshore drilling in the continental shelf). A different set of strata will be defined for deep ocean extraction.
 
 Please provide depth ranges (in km) for the strata I named above. Also provide alternative strata names and depths or entirely different abstractions if you think they may be useful to consider.
-
----
----
-
-_Claude-Opus-4.6 (output effort = high). 2026-02-12 response. Some thoughts for implementation:_
-
-_I like Claude's alternative 6-stratum model. The additional "near-surface" term is clear and may help subsequent composition/extraction abstractions. I agree that extreme/ultra distinction is ambiguous, but no usable alternative was suggested. Below these we have "lower continental crust", "upper mantel", etc., which we only need to consider for composition display and total planet harvest._
-
-_The follow-up query/answer for ocean floor strata is difficult to use. Perhaps "bathyal floor" can be incorporated into national territories, and the rest can be condensed into "abyssal floor" and "ocean crust"._
 
 ---
 ---

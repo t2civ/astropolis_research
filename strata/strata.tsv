@@ -1,0 +1,30 @@
+name	body	reference_r	territory	strata_group	inner_r	thickness	area_fraction	area	volume	density	mass	survey_level	survey_note
+EARTH_USA_CONTINENTAL_LAND	EARTH	6371	USA	CONTINENTAL_LAND	6370.9	0.1	0.0193	9.83e6	9.83e5	2.0	1.97e18	5.5	Extensive USGS surveys and mining exploration
+EARTH_CHINA_CONTINENTAL_LAND	EARTH	6371	CHINA	CONTINENTAL_LAND	6370.9	0.1	0.0188	9.60e6	9.60e5	2.0	1.92e18	5.0	Broad exploration; remote western regions less known
+EARTH_EU_CONTINENTAL_LAND	EARTH	6371	EU	CONTINENTAL_LAND	6370.9	0.1	0.00980	5.00e6	5.00e5	2.0	1.00e18	6.0	Longest mining history; thorough geological mapping
+EARTH_RUSSIA_CONTINENTAL_LAND	EARTH	6371	RUSSIA	CONTINENTAL_LAND	6370.9	0.1	0.0335	1.71e7	1.71e6	2.0	3.42e18	4.5	Soviet-era surveys extensive; vast remote areas remain
+EARTH_INDIA_CONTINENTAL_LAND	EARTH	6371	INDIA	CONTINENTAL_LAND	6370.9	0.1	0.00645	3.29e6	3.29e5	2.0	6.58e17	4.5	Major mining districts well explored
+EARTH_JAPAN_CONTINENTAL_LAND	EARTH	6371	JAPAN	CONTINENTAL_LAND	6370.9	0.1	7.41e-4	3.78e5	3.78e4	2.0	7.56e16	5.5	Small territory; well-surveyed but resource-poor
+EARTH_ANTARCTICA_CONTINENTAL_LAND	EARTH	6371	ANTARCTICA	CONTINENTAL_LAND	6370.9	0.1	0.0275	1.40e7	1.40e6	2.0	2.80e18	1.5	Ice-covered; minimal surface geological exploration
+EARTH_OTHER_CONTINENTAL_LAND	EARTH	6371	OTHER	CONTINENTAL_LAND	6370.9	0.1	0.176	8.98e7	8.98e6	2.0	1.80e19	3.5	Highly variable by country; includes major mining nations
+EARTH_USA_CONTINENTAL_SUBSURFACE	EARTH	6371	USA	CONTINENTAL_SUBSURFACE	6369	1.5	0.0242	1.23e7	1.85e7	2.55	4.72e19	4.5	Extensive oil/gas/mining drilling data
+EARTH_CHINA_CONTINENTAL_SUBSURFACE	EARTH	6371	CHINA	CONTINENTAL_SUBSURFACE	6369	1.5	0.0206	1.05e7	1.58e7	2.55	4.03e19	4.0	Significant mining and drilling; expanding exploration
+EARTH_EU_CONTINENTAL_SUBSURFACE	EARTH	6371	EU	CONTINENTAL_SUBSURFACE	6369	1.5	0.0137	7.00e6	1.05e7	2.55	2.68e19	5.0	Deep mining tradition; North Sea drilling
+EARTH_RUSSIA_CONTINENTAL_SUBSURFACE	EARTH	6371	RUSSIA	CONTINENTAL_SUBSURFACE	6369	1.5	0.0443	2.26e7	3.39e7	2.55	8.64e19	4.0	Extensive Soviet-era subsurface surveys
+EARTH_INDIA_CONTINENTAL_SUBSURFACE	EARTH	6371	INDIA	CONTINENTAL_SUBSURFACE	6369	1.5	0.00723	3.69e6	5.54e6	2.55	1.41e19	3.5	Moderate drilling and mining depth
+EARTH_JAPAN_CONTINENTAL_SUBSURFACE	EARTH	6371	JAPAN	CONTINENTAL_SUBSURFACE	6369	1.5	0.00153	7.78e5	1.17e6	2.55	2.98e18	4.0	Limited subsurface resources but well-characterized
+EARTH_ANTARCTICA_CONTINENTAL_SUBSURFACE	EARTH	6371	ANTARCTICA	CONTINENTAL_SUBSURFACE	6369	1.5	0.0314	1.60e7	2.40e7	2.55	6.12e19	0.5	Virtually no subsurface data beneath ice sheet
+EARTH_OTHER_CONTINENTAL_SUBSURFACE	EARTH	6371	OTHER	CONTINENTAL_SUBSURFACE	6369	1.5	0.198	1.01e8	1.52e8	2.55	3.88e20	2.5	Variable; many remote/under-explored regions
+EARTH_ATMOSPHERE	EARTH	6371		ATMOSPHERE	6371	65	1	5.21e8	3.35e10	1.54e-7	5.15e18	10	Near-perfect knowledge; routine global atmospheric monitoring
+EARTH_OCEAN	EARTH	6371		OCEAN	6367.31	3.69	0.708	3.61e8	1.33e9	1.025	1.36e21	8.0	Well-characterized bulk chemistry; extensive oceanographic data
+EARTH_OCEAN_FLOOR	EARTH	6371		OCEAN_FLOOR	6366.9	0.1	0.659	3.36e8	3.36e7	1.8	6.05e19	2.0	DSDP/ODP/IODP sampling; vast areas unsampled
+EARTH_OCEAN_CRUST	EARTH	6371		OCEAN_CRUST	6360	6.9	0.659	3.36e8	2.32e9	2.9	6.73e21	1.0	Inferred from ophiolites and sparse deep drilling; seismic constraints
+EARTH_MANTLE	EARTH	6371		MANTLE	3481	2871	1	5.07e8	8.97e11	4.47	4.01e24	0.5	Seismic tomography and gravity models; xenolith constraints only
+EARTH_CORE	EARTH	6371		CORE	0	3481	1	1.52e8	1.77e11	11.0	1.95e24	0.3	Seismic + geochemical/cosmochemical models; no direct sampling
+MOON_POLAR_SHADED_REGOLITH	MOON	1737		POLAR_SHADED_REGOLITH	1736.99	0.01	9e-4	3.41e4	3.41e2	1.5	5.12e14	1.0	LCROSS + radar; sparse characterization of PSRs
+MOON_REGOLITH	MOON	1737		REGOLITH	1736.99	0.01	0.9991	3.79e7	3.79e5	1.5	5.69e17	2.5	Apollo/Luna samples + orbital remote sensing
+MOON_NEAR_SURFACE	MOON	1737		NEAR_SURFACE	1736	0.99	1	3.79e7	3.75e7	2.2	8.25e19	1.5	Apollo seismic; very limited direct sampling at depth
+MOON_CRUST_TERRAE	MOON	1737		CRUST_TERRAE	1677	59	0.83	3.15e7	1.79e9	2.80	5.01e21	2.0	Apollo highland samples; orbital spectroscopy
+MOON_CRUST_MARIA	MOON	1737		CRUST_MARIA	1712	24	0.17	6.44e6	1.52e8	2.85	4.33e20	1.8	Apollo/Luna mare basalt samples; anorthositic substrate inferred from orbital + seismic data
+MOON_MANTLE	MOON	1737		MANTLE	337	1340	1	3.54e7	1.96e10	3.40	6.66e22	0.5	Seismic and gravity models only
+MOON_CORE	MOON	1737		CORE	0	337	1	1.43e6	1.60e8	7.0	1.12e21	0.3	Poorly constrained size and composition
