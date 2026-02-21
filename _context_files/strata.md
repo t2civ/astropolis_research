@@ -6,7 +6,7 @@
 2. Depths here are reference only. Strata volumes should be constructed as simplified spheres, sphere shells, or fractional sphere shells, using area-weighted radial boundaries when actual thickness varies (e.g., Earth ocean). Calculated inner and outer radii won't exactly line up for adjacent strata using these simplified geometries, but this doesn't matter in the simulation. (Ring systems are handled separately.)
 3. Some strata are "best guesses". This should be noted here but uncertainty is handled elsewhere in the model.
 4. Earth "continental land" and "continental shelf" encompass land area and shelf area, respectively. Continental strata below these encompass both land and shelf area (this should capture all offshore drilling operations). "Ocean" as a volume includes water over the continental shelf. Therefore, in area construction: total surface = continental land + continental shelf + ocean floor = continental near-surface (or deeper "continental") + ocean crust; ocean = continental shelf + ocean floor; ocean ≠ ocean floor.
-5. Each Earth "continental" stratum is further subdivided into 8 territorial/economic interest regions. All continental land and shelf area (and continental layers below) should be assigned into these exclusive regions ("ocean" as a whole is handled as a separate non-territorial region even though shelf below is territorial). These regions are defined as:
+5. Each Earth "continental" stratum is further subdivided into 8 territorial/economic interest regions. All continental ice & water bodies, land and shelf, and continental crust layers below, should be assigned into these exclusive regions ("ocean" as a whole is handled as a separate non-territorial region even though shelf below is territorial). These regions are defined as:
    * USA
    * China
    * EU+ (includes EEA nations, UK, Switzerland, & associated microstates)
@@ -50,7 +50,7 @@
 
 ## Earth
 
-*Mean radius 6,371 km. Surface gravity 9.81 m/s² (1.0 g). N₂–O₂ atmosphere, 101.3 kPa mean surface pressure. Dense hydrosphere. Present-day extraction technology baseline. See notes 4 and 5, which apply to Earth "continental" specifically.*
+*Mean radius 6,371 km. Surface gravity 9.81 m/s² (1.0 g). N₂–O₂ atmosphere, 101.3 kPa mean surface pressure. Dense hydrosphere. Present-day extraction technology baseline. See notes 4 and 5, which apply to Earth "continental" strata specifically (including continental ice and water bodies).*
 
 - **Atmosphere** — Atmosphere defined as 65 km thick (~99.99% of mass). Air separation for N₂, O₂, Ar, CO₂, noble gases.
 - **Continental Ice Bodies** — Ice sheets and glaciers (over land and above ground); simplified geometry is ~14.8 million km² area (~2.9% of Earth surface) at ~1.95 km thickness.
