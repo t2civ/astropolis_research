@@ -79,7 +79,7 @@ EARTH_INDIA_CONTINENTAL_LOWER_CRUST	EARTH	6371	INDIA	CONTINENTAL_LOWER_CRUST	633
 EARTH_JAPAN_CONTINENTAL_LOWER_CRUST	EARTH	6371	JAPAN	CONTINENTAL_LOWER_CRUST	6336	15.0	0.00153	7.78e5	1.17e7	2.95	3.45e19	0.5	Seismic models; active volcanic arc complicates structure
 EARTH_ANTARCTICA_CONTINENTAL_LOWER_CRUST	EARTH	6371	ANTARCTICA	CONTINENTAL_LOWER_CRUST	6336	15.0	0.0314	1.60e7	2.40e8	2.95	7.08e20	0.3	Poorly constrained seismic and gravity models only
 EARTH_OTHER_CONTINENTAL_LOWER_CRUST	EARTH	6371	OTHER	CONTINENTAL_LOWER_CRUST	6336	15.0	0.198	1.01e8	1.52e9	2.95	4.48e21	0.5	Seismic models; xenolith data from select cratons globally
-EARTH_ATMOSPHERE	EARTH	6371		ATMOSPHERE	6371	65	1	5.21e8	3.35e10	1.54e-7	5.15e18	10	Near-perfect knowledge; routine global atmospheric monitoring
+EARTH_ATMOSPHERE	EARTH	6371		ATMOSPHERE	6371	65	1	5.21e8	3.35e10	1.54e-4	5.15e18	10	Near-perfect knowledge; routine global atmospheric monitoring
 EARTH_OCEAN	EARTH	6371		OCEAN	6367.31	3.69	0.708	3.61e8	1.33e9	1.025	1.36e21	8.0	Well-characterized bulk chemistry; extensive oceanographic data
 EARTH_OCEAN_FLOOR	EARTH	6371		OCEAN_FLOOR	6366.9	0.1	0.659	3.36e8	3.36e7	1.8	6.05e19	2.0	DSDP/ODP/IODP sampling; vast areas unsampled
 EARTH_OCEAN_CRUST	EARTH	6371		OCEAN_CRUST	6360	6.9	0.659	3.36e8	2.32e9	2.9	6.73e21	1.0	Inferred from ophiolites and sparse deep drilling; seismic constraints
