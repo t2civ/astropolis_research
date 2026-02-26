@@ -12,8 +12,7 @@ Notes:
    * `abundance_error` (μ_err) — Epistemic uncertainty (SD) about the abundance.
    * `dispersion` — (σ) — Standard deviation of the lognormal distribution of the resource in log₁₀ units (simplified to cover all spatial scales). This is the principle factor that allows economical extraction in mining and drilling. For homogeneous strata like atmospheres, dispersion is 0. 
    * `dispersion_error` (σ_err) — Epistemic uncertainty (SD) about the dispersion.
-4. Internal parameters are transformed and presented to the user as abundance ± err and deposits ± err (the latter for heterogeneous strata only), where abundance is measured abundance converted to percent, and deposits is a percent estimation generated from abundance and dispersion (combining both error terms). There is cutoff percent that represents economic viability for extraction that varies with commodity prices.
-5. Use CONSTANT_CASE for the "name" field in data table construction. Replace non-alphanumeric characters with underscores. E.g., IRON_NICKEL, IRON_ORES, etc.
+4. Use CONSTANT_CASE for the "name" field in data table construction. Replace non-alphanumeric characters with underscores. E.g., IRON_NICKEL, IRON_ORES, etc.
 
 List:
 

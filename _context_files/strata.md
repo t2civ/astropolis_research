@@ -86,7 +86,8 @@
 *Mean radius 3,390 km. Surface gravity 3.72 m/s² (0.38 g). Thin CO₂ atmosphere, ~0.6 kPa mean surface pressure. Mean surface temperature ~−60 °C. Key challenges: low pressure, cold, dust storms, perchlorates, communication delay.*
 
 - **Atmosphere** — Atmosphere defined as 100 km thick (~99.99% of mass). ~95% CO₂, ~2.7% N₂, ~1.6% Ar, traces of O₂, CO, H₂O. ISRU feedstock for propellant (Sabatier, RWGS, electrolysis) and industrial gases.
-- **Polar Cap** — North: H₂O-ice-dominated, ~1,000 km diameter, ~2–3 km thick with interbedded dust. South: permanent CO₂ cap over H₂O ice, ~1–1.5 km thick. Ice mining for H₂O and CO₂.
+- **North Polar Cap** — H₂O-ice-dominated, ~1,000 km diameter, ~2–3 km thick with interbedded dust. Ice mining for H₂O and CO₂.
+- **South Polar Cap** — Permanent CO₂ cap over H₂O ice, ~1–1.5 km thick. Ice mining for H₂O and CO₂.
 - **Regolith** — 0–5 m. Basaltic fines, aeolian dust, iron oxides, perchlorates, sulfates. Highly variable thickness.
 - **Near-Surface** — 5 m to 0.5 km. Weathered bedrock, cemented regolith, ground ice at mid-to-high latitudes.
 - **Subsurface** — 0.5–5 km. Intact basaltic and sedimentary rock, possible deep brines.
