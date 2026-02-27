@@ -18,10 +18,10 @@
 6. Generic strata are compositional templates only. Each body in the simulation has a unique composition.
 7. Each stratum has a simplified composition defined by mean abundance and dispersion (each having uncertainty error terms) for each simulation resource. Large dispersion is the principal factor enabling economical extraction in mining/drilling operations.
 8. For data table construction, convert text to CONSTANT_CASE (capitalize, omit parentheses, and replace non-alphanumeric characters with underscores) to generate the following fields:
-   * body — Usually the section name. For Small/Undifferentiated Bodies section, extract body from the item name (Specific subsection) or leave as blank (Generic subsection).
-   * territory — Usually blank. For Earth "continental" strata, it is the regional subdivision defined in note 5 (convert "EU+" to "EU").
-   * strata_group — Item name without body or territory prefix. In the case of Small/Undifferentiated Bodies (Specific subsection) it is simply "BULK".
-   * name — Concatenate above three (as applicable) using underscores. E.g., EARTH_OCEAN, EARTH_USA_CONTINENTAL_SURFACE, HYPERION_BULK, etc. This is a unique identifier for each stratum.
+   * body — Body type (e.g., PLANET, MOON, ASTEROID) followed by body name (usually the section name; for Small/Undifferentiated Bodies section, extract body name from the item name; or none for generic). Examples: PLANET_EARTH, MOON_MOON, PLANET_MARS, MOON_PHOBOS.
+   * territory — Usually blank. For Earth "continental" strata, it is the regional subdivision defined in note 5 (abbreviate "EU+" as "EU").
+   * stratum_group — Item name without body or territory prefix. Abbreviate CONTINENTAL as CONT. In the case of Small/Undifferentiated Bodies and Generic, it is simply "BULK".
+   * name — Concatenate above three (as applicable) using underscores. E.g., PLANET_EARTH_ATMOSPHERE, PLANET_EARTH_USA_CONT_SURFACE, MOON_MOON_REGOLITH, MOON_PHOBOS_BULK, etc. This is a unique identifier for each stratum.
 
 ---
 
