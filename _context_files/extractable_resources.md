@@ -1,6 +1,7 @@
 # Extractable Resources
 
 Notes:
+
 1. "Extractable resources" are simplified model abstractions that are (at the same time):
    * Output resources from extraction operations such as mining, drilling, and air separation, including beneficiation where applicable. 
    * The substances that completely define the composition of any natural body stratum by total mass. In this context, stone and regolith are usually the main "filler" material for solid strata. Ores represent total concentrated mass (usually much greater than what could be extracted economically) and volatiles represent what might be separated from solids in the extraction operation (sometimes a target product).
@@ -12,7 +13,7 @@ Notes:
    * `abundance_error` (μ_err) — Epistemic uncertainty (SD) about the abundance.
    * `dispersion` — (σ) — Standard deviation of the lognormal distribution of the resource in log₁₀ units (simplified to cover all spatial scales). This is the principle factor that allows economical extraction in mining and drilling. For homogeneous strata like atmospheres, dispersion is 0. 
    * `dispersion_error` (σ_err) — Epistemic uncertainty (SD) about the dispersion.
-4. For data table construction of the "name" field, convert text to CONSTANT_CASE (capitalize and replace non-alphanumeric characters with underscores) and abbreviate INDUSTRIAL as INDUST. Examples: IRON_NICKEL, IRON_ORES, ALUMINIUM_ORES, INDUST_METAL_ORES, INDUST_MINERALS, etc.
+4. For data table construction of the "name" field, convert text to CONSTANT_CASE (capitalize and replace non-alphanumeric characters with underscores) and abbreviate INDUSTRIAL as INDUST. Examples: IRON_NICKEL, IRON_ORES, ALUMINIUM_ORES, INDUST_METAL_ORES, INDUST_MINERALS.
 
 List:
 
@@ -28,7 +29,7 @@ List:
 - **Organics/Tholins** — Ref. blend of Earth kerogen concentrate (Type I/II, demineralized from oil shale and organic-rich marine mudstone; excludes coal, petroleum, gas, and biomass) and off-Earth carbonaceous chondrite insoluble organic matter (IOM), Titan tholins, and cometary CHON particles. C 73.4, H 7.4, N 4.5, O 10.5, S 3.6, other 0.6. Byproducts (ppm): V 150 (Earth kerogen porphyrins), Ni 50 (Earth kerogen porphyrins), Mo 15 (Earth kerogen, chelated in organic matrix).
 - **Coal** — Earth only; ref. washed, air-dried thermal coal, production-weighted global blend (dominated by bituminous and sub-bituminous). C 66, O 18, H 5.5, Si 2.3, S 1.5, N 1.4, Al 1.3, Fe 0.7, Ca 0.35, K 0.17, Mg 0.12, Na 0.07, Ti 0.06, P 0.02, other 2.51. Byproducts (ppm): total REE 50 (concentrated 5–10× in coal ash — some coal ashes exceed 1000 ppm total REE; Ce 22.5, La 10, Nd 7, Y 4, Pr 2.5, Sm 1.5, Gd 1, Dy 0.5, Er 0.3, Yb 0.3, Eu 0.2, Tb 0.1, Ho 0.05, Tm 0.03, Lu 0.02), Ge 10, Ga 10, Se 3, U 3.
 - **Oil** — Earth only; ref. desalted, dewatered crude, production-weighted global average. Co-product: recovered elemental sulfur. C 84.5, H 12, S 1.5, N 0.4, O 0.6, other 1.0. Byproducts (ppm): V 150, Ni 50.
-- **Stone** — Bulk rock, suitable for dimension stone when not molten; ref. primitive mantle pyrolite (McDonough & Sun 1995). O 44, Mg 23, Si 21, Fe 6, Ca 2.5, Al 2.3, Na 0.3, Cr 0.3, Ni 0.2, other (Ti, Mn, K, P) 0.4.
+- **Stone** — Bulk rock, suitable for dimension stone when not molten; ref. primitive mantle pyrolite. O 44, Mg 23, Si 21, Fe 6, Ca 2.5, Al 2.3, Na 0.3, Cr 0.3, Ni 0.2, other (Ti, Mn, K, P) 0.4.
 - **Regolith** — Surface fines and debris (includes overburden and gangue from mining operations); ref. generic basalt (Moon/Mars/MORB average). O 44, Si 22, Fe 11, Ca 7, Al 7, Mg 5, Na 1.5, Ti 1.5, other (K, Mn, Cr, P) 1.
 - **Water** — H₂O. H 11.2, O 88.8.
 - **Hydrogen** — H₂. H 100.
