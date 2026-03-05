@@ -60,14 +60,14 @@ Notes:
 
 ## Materials
 
-- **Iron** — Industrial pig iron. [Needs completion!]
+- **Iron** — Industrial pig iron; ref. blast-furnace pig iron, global production-weighted. Fe 93.5, C 4, Si 1, Mn 0.7, P 0.15, S 0.05, other (Cr, Ti, V, Cu) 0.6.
 - **Steel** — Carbon steel, alloy steel, stainless steel; ref. production-weighted global blend (~85% carbon, ~10% alloy, ~5% stainless). Fe 96.5, Cr 1, Mn 0.8, Ni 0.5, Si 0.3, C 0.3, Mo 0.1, other (V, W, Cu, N, S, P) 0.5.
 - **Aluminium** — Refined Al metal and alloys; ref. production-weighted blend of wrought (1xxx, 3xxx, 5xxx, 6xxx, 7xxx) and cast alloys. Al 97, Si 1, Cu 0.5, Mg 0.4, Fe 0.4, other (Mn, Zn, Cr, Ti, Ni) 0.7.
 - **Industrial Metals** — Cu, Ti, Zn, Ni, Sn, Pb, W, Mo, Co, Mn, Cr, etc.; also includes Ag. Ref. production-weighted basket of refined industrial metals (metal content basis). Cu 29, Mn 23, Zn 16, Cr 13.5, Pb 13.5, Ni 3.75, Sn 0.4, Mo 0.35, Ti 0.3, Co 0.24, W 0.1, Ag 0.03, other 0.03.
 - **Precious Metals** — Au, Pt, Pd, Rh, Ru, Ir, Os (excludes Ag). Ref. production-weighted basket of refined precious metals. Au 87.5, Pd 5.5, Pt 5, Ru 0.9, Rh 0.8, Ir 0.2, Os 0.03, other 0.07.
 - **Rare Earths** — REE oxides, metals, alloys, permanent-magnet stock; ref. production-weighted blend of separated REE oxides (~50%), NdFeB magnet stock (~30%), RE metals/alloys (~10%), and other RE compounds (~10%). Total REE 67 (Ce 18, Nd 16, La 12, Pr 6, Y 5, Dy 2.5, Sm 2, Tb 1, Gd 1, other REE 3.5), Fe 18, O 8.5, B 0.3, Co 0.6, other (Cu, Al, Ni, Mg, F, Cl, Si) 5.6.
-- **Uranium** — Purified, unenriched UF₆. [Needs completion!]
-- **Thorium** — [Needs completion! This is supposed to be the "commodity" compound that is subsequently processed/manufactured into Thorium Fuel.]
+- **Uranium** — Purified, unenriched uranium hexafluoride (UF₆) at natural isotopic assay (0.711% ²³⁵U); ref. conversion-plant product meeting ASTM C787 specification. U 67.6 (isotopic: 0.711% U-235, 99.289% U-238), F 32.4.
+- **Thorium** — Nuclear-grade thorium dioxide (ThO₂) powder; ref. purified thoria separated from monazite-process residues, meeting nuclear-purity specifications. Th 87.9, O 12.1.
 - **Concrete** — Portland cement, geopolymer, sintered-regolith binder; ref. ready-mix concrete with blended siliceous/calcareous aggregate. O 49.5, Si 20, Ca 17, C 3, Al 2, Fe 1.5, Mg 1.5, H 1, Na 0.5, K 0.5, S 0.3, other (Ti, Mn, Cl) 2.7.
 - **Glass/Ceramics** — Flat glass, fiber glass, refractory and technical ceramics; ref. production-weighted blend dominated by soda-lime glass (~80%). O 46, Si 33, Na 8, Ca 6, Al 3, Mg 2, B 0.5, K 0.3, Fe 0.3, other (Ba, Ti, Zr, Pb, F) 0.9.
 - **Semiconductor Materials** — High-purity Si, GaAs, SiC, compound semiconductors; ref. production-weighted blend dominated by electronic/solar-grade silicon (~95% by mass). Si 96, As 1.6, Ga 1.4, C 0.5, other (In, P, N, Ge, O) 0.5.
