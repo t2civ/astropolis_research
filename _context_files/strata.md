@@ -5,23 +5,23 @@
 1. The simulation handles all non-generic strata as exclusive masses, each with its own composition.
 2. Depths here are reference only. Strata volumes should be constructed as simplified spheres, sphere shells, or fractional sphere shells, using area-weighted radial boundaries when actual thickness varies (e.g., Earth ocean). Calculated inner and outer radii won't exactly line up for adjacent strata using these simplified geometries, but this doesn't matter in the simulation. (Ring systems are handled separately.)
 3. Some strata are "best guesses". This should be noted here but uncertainty is handled elsewhere in the model.
-4. Earth "continental land" and "continental shelf" encompass land area and shelf area, respectively. Continental strata below these encompass both land and shelf area (this should capture all offshore drilling operations). "Ocean" as a volume includes water over the continental shelf. Therefore, in area construction: total surface = continental land + continental shelf + ocean floor = continental near-surface (or deeper "continental") + ocean crust; ocean = continental shelf + ocean floor; ocean ≠ ocean floor.
-5. Each Earth "continental" stratum is further subdivided into 8 territorial/economic interest regions. All continental land and shelf area (and continental layers below) should be assigned into these exclusive regions ("ocean" as a whole is handled as a separate non-territorial region even though shelf below is territorial). These regions are defined as:
+4. Earth "continental surface" and "continental shelf" encompass land area (including glacier and surface water body footprints) and shelf area, respectively. Continental strata below these (near-surface, subsurface, etc.) encompass both land and shelf area (this should capture all offshore drilling operations). "Ocean" as a volume includes water over the continental shelf. Therefore, in area construction: total surface ≈ continental surface + continental shelf + ocean floor ≈ continental near-surface (or deeper "continental") + ocean crust; ocean = continental shelf + ocean floor; ocean ≠ ocean floor.
+5. Each Earth "continental" stratum is further subdivided into the 8 territorial/economic interest regions listed below, except for continental ice bodies which are assigned only to Antarctica and Other. All continental surface and shelf (and continental crust layers below) should be assigned into these exclusive regions. ("Ocean" as a whole is handled as a separate non-territorial region even though shelf below is territorial.) These regions are defined as:
    * USA
    * China
    * EU+ (includes EEA nations, UK, Switzerland, & associated microstates)
    * Russia
    * India
    * Japan
-   * Antarctica
-   * Other (includes Greenland and remaining land and continental shelf)
+   * Antarctica (has "continental ice bodies" covering most of "continental surface")
+   * Other (includes Greenland and remaining land and continental shelf; has "continental ice bodies" covering the part of "continental surface" that represents Greenland)
 6. Generic strata are compositional templates only. Each body in the simulation has a unique composition.
-7. Each stratum has composition defined by mean resource abundances and heterogeneities (with uncertainty error terms on both abundance and heterogeneity for each resource). Large heterogeneity is the principal factor enabling economical extraction in mining/drilling operations.
+7. Each stratum has a simplified composition defined by mean abundance and dispersion (each having uncertainty error terms) for each simulation resource. Large dispersion is the principal factor enabling economical extraction in mining/drilling operations.
 8. For data table construction, convert text to CONSTANT_CASE (capitalize, omit parentheses, and replace non-alphanumeric characters with underscores) to generate the following fields:
-   * body — Usually the section name. For Small/Undifferentiated Bodies section, extract body from the item name (Specific subsection) or leave as blank (Generic subsection).
-   * territory — Usually blank. For Earth "continental" strata, it is the regional subdivision defined in note 5 (convert "EU+" to "EU").
-   * strata_group — Item name without body or territory prefix. In the case of Small/Undifferentiated Bodies (Specific subsection) it is simply "BULK".
-   * name — Concatenate above three (as applicable) using underscores. E.g., EARTH_OCEAN, EARTH_USA_CONTINENTAL_SURFACE, HYPERION_BULK, etc. This is a unique identifier for each stratum.
+   * body — Body type (e.g., PLANET, MOON, ASTEROID) followed by body name (usually the section name; for Small/Undifferentiated Bodies section, extract body name from the item name; or none for generic). Examples: PLANET_EARTH, MOON_MOON, PLANET_MARS, MOON_PHOBOS.
+   * territory — Usually blank. For Earth "continental" strata, it is the regional subdivision defined in note 5 (abbreviate "EU+" as "EU").
+   * stratum_group — Item name without body or territory prefix. Abbreviate CONTINENTAL as CONT. In the case of Small/Undifferentiated Bodies and Generic, it is simply "BULK".
+   * name — Concatenate above three (as applicable) using underscores. E.g., PLANET_EARTH_ATMOSPHERE, PLANET_EARTH_USA_CONT_SURFACE, MOON_MOON_REGOLITH, MOON_PHOBOS_BULK, etc. This is a unique identifier for each stratum.
 
 ---
 
@@ -50,12 +50,11 @@
 
 ## Earth
 
-*Mean radius 6,371 km. Surface gravity 9.81 m/s² (1.0 g). N₂–O₂ atmosphere, 101.3 kPa mean surface pressure. Dense hydrosphere. Present-day extraction technology baseline. See notes 4 and 5, which apply to Earth "continental" specifically.*
+*Mean radius 6,371 km. Surface gravity 9.81 m/s² (1.0 g). N₂–O₂ atmosphere, 101.3 kPa mean surface pressure. Dense hydrosphere. Present-day extraction technology baseline. See notes 4 and 5, which apply to Earth "continental" strata specifically (including continental ice and water bodies).*
 
 - **Atmosphere** — Atmosphere defined as 65 km thick (~99.99% of mass). Air separation for N₂, O₂, Ar, CO₂, noble gases.
-- **Continental Ice Bodies** — Ice sheets and glaciers (over land and above ground); simplified geometry is ~14.8 million km² area (~2.9% of Earth surface) at ~1.95 km thickness.
-- **Continental Water Bodies** — Includes open fresh water bodies (above ground liquid); simplified geometry is ~2.1 million km² area (~0.4% of Earth surface) at ~46 m thickness. Reservoirs, irrigation.
-- **Continental Land** — All land area to 100 m depth(~149 million km²). Composition includes groundwater/permafrost. Quarrying, strip mining, placer deposits, regolith extraction, shallow wells.
+- **Continental Ice Bodies** — Major ice sheets and glaciers for Antarctica and Greenland only; simplified geometry is ~12.3 million km² area at 2.14 km thickness (Antarctica) and ~2.24 million km² area at 1.15 km thickness (Greenland as part of "Other" territory). For all other territorial regions, glacier and ice mass is absorbed into Continental Surface.
+- **Continental Surface** — All land area including areas covered by glaciers and surface water bodies, to 100 m depth (~152 million km²). Composition includes groundwater, permafrost, surface water bodies (lakes, rivers, reservoirs), and glaciers (for non-Antarctic/Greenland territories). Quarrying, strip mining, placer deposits, regolith extraction, shallow wells, freshwater extraction.
 - **Continental Shelf** — Continental shelf seafloor to 100 m depth below seafloor (~25 million km²). Sand & gravel dredging, placer and phosphorite deposits, subsurface mineral deposits.
 - **Continental Near-Surface** — 0.1–0.5 km depth (land & shelf; ~174 million km²). Open-pit mining, shallow underground mining, shallow drilling.
 - **Continental Subsurface** — 0.5–2.0 km (land & shelf; ~174 million km²). Conventional underground mining, standard drilling.
@@ -86,7 +85,8 @@
 *Mean radius 3,390 km. Surface gravity 3.72 m/s² (0.38 g). Thin CO₂ atmosphere, ~0.6 kPa mean surface pressure. Mean surface temperature ~−60 °C. Key challenges: low pressure, cold, dust storms, perchlorates, communication delay.*
 
 - **Atmosphere** — Atmosphere defined as 100 km thick (~99.99% of mass). ~95% CO₂, ~2.7% N₂, ~1.6% Ar, traces of O₂, CO, H₂O. ISRU feedstock for propellant (Sabatier, RWGS, electrolysis) and industrial gases.
-- **Polar Cap** — North: H₂O-ice-dominated, ~1,000 km diameter, ~2–3 km thick with interbedded dust. South: permanent CO₂ cap over H₂O ice, ~1–1.5 km thick. Ice mining for H₂O and CO₂.
+- **North Polar Cap** — H₂O-ice-dominated, ~1,000 km diameter, ~2–3 km thick with interbedded dust. Ice mining for H₂O and CO₂.
+- **South Polar Cap** — Permanent CO₂ cap over H₂O ice, ~1–1.5 km thick. Ice mining for H₂O and CO₂.
 - **Regolith** — 0–5 m. Basaltic fines, aeolian dust, iron oxides, perchlorates, sulfates. Highly variable thickness.
 - **Near-Surface** — 5 m to 0.5 km. Weathered bedrock, cemented regolith, ground ice at mid-to-high latitudes.
 - **Subsurface** — 0.5–5 km. Intact basaltic and sedimentary rock, possible deep brines.
