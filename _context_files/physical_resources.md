@@ -2,7 +2,7 @@
 
 Notes:
 
-1. The 6 groupings are for organization and display; functional effects in the simulation are handled by individual item properties (although these coincide with groupings in some cases).
+1. The 6 groupings here are for organization and display only; functional effects in the simulation are handled by individual item properties (although these coincide with groupings in some cases).
 2. Elemental compositions are for reference only. Industrial inputs should be considered as highly fungible when resource input or composition isn't explicit. E.g., "concrete" is broadly defined and almost always produced from local bulk extraction products.
 3. "Extractable" means that the resource exists in natural bodies at least somewhere and may be a target of extraction (excluding biological targets), possibly in addition to other sourcing. Resources not marked as extractable must be sourced from refining, manufacturing, agriculture, aquaculture, forestry, etc.
 5. Deuterium (D₂) is treated as a downstream refined product of water or hydrogen, not as a separate extractable resource. In contrast, Helium-3 (³He) is a separate "extractable" resource. The different treatment is due to Helium-3's much higher fractional variation (relative to the bulk isotope) among different natural strata.
@@ -10,6 +10,7 @@ Notes:
 7. Manufactured/fabricated resources are considered to include their component resources. E.g., Composite Structures includes Polymers, Composites, Technical Textiles, etc.; Robotics includes Steel, Aluminium, Industrial Metals, Electronics, etc.; Packaged Meals includes Crop Products, Animal Products, Polymers, Aluminium, etc. Extractable resources are treated as exclusive masses in natural body composition, but may be part of the composition of downstream products.
 8. All physical resources including catchall categories are abstracted as singular commodities with a common price by weight.
 9. Fixed infrastructure and large transport vehicles (e.g., heavy rockets) are handled separately, although they are fabricated from resources here.
+10. See General Instructions note 5 for data table name construction. Abbreviations to use for items here are: INDUSTRIAL → INDUST, MATERIALS → MAT, and PRODUCTS → PROD. Examples: Helium-3 → HELIUM_3, Industrial Metal Ores → INDUST_METAL_ORES, etc.
 
 ## Energy
 

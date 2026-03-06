@@ -4,11 +4,13 @@ I'm collecting information for a simulation that focuses on resource streams: ex
 
 # General Instructions
 
-1. Report and quit working if context appears to be missing.
+1. Report and quit working if a context file appears to be missing.
 2. Provide feedback and ask for clarifications that might help improve the prompt and/or context files for subsequent analyses.
 3. Summarize simplifications and important omissions in your analyses.
 4. Use provided context files for cross-calibration when helpful. In general, descriptive information is provided in markdown (.md) files and model input data tables are provided in tab-delimited (.tsv) files.
-5. Write large numbers (≥1e6) and small numbers (<0.001) using "e" exponent notation (e.g., 5.97e24). Prefer 3 significant digits, but use fewer or more when warranted by actual precision.
-6. Prefer the unit tonne (t) for large masses and tonne per hour (t/h) for large mass rates. Otherwise, use SI units as commonly used for the measured property (e.g., g/cm³ for density; km for large distances unless ly or parsec is warranted; etc.).
-7. For data table construction, convert entity text to CONSTANT_CASE (capitalize, omit parentheses, omit "&", and replace other non-alphanumeric characters with underscores). Abbreviate INDUSTRIAL as INDUST, MATERIALS as MAT, and PRODUCTS as PROD. Examples: Helium-3 → HELIUM_3, Industrial Metal Ores → INDUST_METAL_ORES, etc.
+5. For data table construction, convert item text to CONSTANT_CASE: i.e., capitalize, replace super- or subscript numbers with regular numbers (e.g., ² or ₂ → 2), replace non-alphanumeric characters with underscores, and remove any leading, trailing or consecutive underscores (__ → _). Individual files may list specific abbreviations to use for file items.
+6. Item descriptions in the markdown context files should be brief and written in terms of the real-world or speculative real-world, not in terms of model implementation. E.g., they shouldn't specifically reference model entities (list items) exactly as they appear in other context files.
+7. Write large numbers (≥1e6) and small numbers (<0.001) using "e" exponent notation (e.g., 5.97e24). Prefer 3 significant digits, but use fewer or more when warranted by actual precision.
+8. Prefer the unit tonne (t) for large masses and tonne per hour (t/h) for large mass rates. Otherwise, use SI units as commonly used for the measured property (e.g., g/cm³ for density; km for large distances unless ly or parsec is warranted; etc.).
+9. Generate file content changes as copyable code blocks.
  
