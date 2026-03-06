@@ -2,12 +2,14 @@
 
 Notes:
 
-1. The 6 groupings are for organization and display; functional effects in the simulation are handled by individual item properties (although these coincide with groupings in some cases).
+1. The 6 groupings here are for organization and display only; functional effects in the simulation are handled by individual item properties (although these coincide with groupings in some cases).
 2. Extraction operations are further subdivided within the simulation by target strata, so each listed here really represents several or possibly many different operations internally. Efficiency and output is entirely dependent on the specific strata in these cases.
-3. Non-extraction operations are generally more fixed in their input/output composition. For these we need separately listed operations to simulate different resource streams.
-4. "Natural" resource conversions (e.g., Earth's water cycle) are handled by a separate system in the simulation.
-5. There is a 7th group for "services" (not in this file) that handles intangible operations (i.e., conversions among non-physical resources).
-6. See General Instructions note 7 for data table name construction. Additional abbreviations to use are: INDUSTRIAL → INDUST, SYNTHESIS → SYNTH, MANUFACTURING → MANUF, FABRICATION → FAB.
+3. Non-extraction operations are fixed in their input/output composition (although energy efficiency may vary). For these we need separately listed operations to simulate different resource streams.
+4. Electricity and heat are handled separately.
+5. "Natural" resource conversions (e.g., Earth's water cycle) are handled by a separate system in the simulation.
+6. There is a 7th group for "services" (not in this file) that handles intangible operations (i.e., conversions among non-physical resources).
+7. See General Instructions note 5 for data table name construction. Abbreviations to use for items in this file are: LIQUID → LIQ, INDUSTRIAL → INDUST, SYNTHESIS → SYNTH, MANUFACTURING → MANUF, FABRICATION → FAB, ENVIRONMENT → ENV. Examples: CO₂ Electrolysis → CO2_ELECTROLYSIS, Controlled-Environment Agriculture → CONTROLLED_ENV_AGRICULTURE.
+
 
 ## Energy
 
@@ -19,8 +21,7 @@ Notes:
 - **Hydrogen Power** — Electricity and heat from hydrogen combustion in gas turbines and reciprocating engines. Applicable to large-scale peaking power, industrial process heat, and high-output off-Earth installations where waste heat integration is advantageous. Consumes hydrogen and oxygen.
 - **Methane Power** — Electricity and heat from methane combustion in gas turbines and reciprocating engines. Covers natural gas power on Earth and ISRU-derived or harvested methane combustion off-Earth (Mars, Titan, gas giant sourcing).
 - **Methanol Power** — Electricity and heat from methanol combustion in modified gas turbines and reciprocating generators. Emerging marine fuel pathway on Earth; storable liquid fuel option for off-Earth surface power stations.
-- **Ethanol Power** — Electricity and heat from ethanol combustion in flex-fuel generators and gas turbines. Established power pathway in major bioethanol-producing regions; applicable wherever biofuel production creates surplus ethanol.
-- **Liquid Hydrocarbons Power** — 
+- **Ethanol Power** — Electricity and heat from ethanol combustion in flex-fuel generators and gas turbines. Established power pathway in major bioethanol-producing regions; applicable wherever biofuel production creates surplus ethanol. 
 - **Oil Power** — Electricity and heat from combustion of liquid petroleum fuels in generators and industrial boilers. Earth-dominated.
 - **Coal Power** — Electricity and heat from coal combustion in pulverized-coal and fluidized-bed boilers. Earth-only. Fly ash and bottom ash are recoverable as construction feedstock; rare-earth elements concentrate ~5–10× in combustion ash and may be recoverable.
 - **Hydrogen Fuel Cells** — Electricity from PEM and solid-oxide fuel cells operating on hydrogen and oxygen. Higher electrical efficiency than combustion; primary pathway for distributed power, vehicle propulsion, and small-to-medium stationary installations on and off Earth.
@@ -29,15 +30,17 @@ Notes:
 - **LEU Fission Power** — Electricity and heat from thermal-neutron fission of low-enriched uranium fuel in light-water and heavy-water reactor types. Dominant nuclear power pathway on Earth.
 - **HEU Fission Power** — Electricity and heat from compact high-enrichment uranium reactors for naval propulsion and space-rated kilowatt-to-megawatt power systems.
 - **Thorium Fission Power** — Electricity and heat from thorium-cycle thermal-breeder reactors, breeding ²³³U from ²³²Th in-situ.
-- **D-T Fusion Power** — Electricity from deuterium–tritium fusion. Tritium is bred from lithium blankets in-situ. Requires deuterium fuel and a lithium supply.
-- **He-3 Fusion Power** — Electricity and heat from D-³He or ³He-³He fusion, producing substantially fewer neutrons than D-T cycles. Requires helium-3 fuel.
+- **D-T Fusion Power** — Electricity and heat from deuterium–tritium fusion. Tritium is bred from lithium blankets in-situ.
+- **D-³He Fusion Power** — Electricity and heat from D-³He fusion, producing substantially fewer neutrons than D-T cycles but requiring twice the ignition temperature.
+- **³He-³He Fusion Power** — Electricity and heat from ³He-³He fusion, producing no neutrons but requiring higher ignition temperature than D-³He Fusion.
 - **Radioisotope Power** — Electricity and heat from radioactive decay in radioisotope thermoelectric generators (RTGs) and Stirling radioisotope generators. Uses plutonium-238 or strontium-90 produced in reactor operations. Low power density but extreme reliability and longevity; critical for deep outer solar system probes and surface stations with limited sunlight.
+
 
 ## Extraction
 
 - **Atmosphere Separation** — Cryogenic distillation, pressure-swing adsorption, membrane separation, or centrifugal processing of planetary atmospheres. On terrestrial worlds, separates oxygen, nitrogen, carbon dioxide, argon, and noble gases. On gas giants, atmospheric skimming or balloon-based systems harvest hydrogen, helium, helium-3, and methane from the upper atmosphere.
 - **Volatiles Extraction** — Thermal processing, sublimation trapping, or mechanical extraction of volatile species from ice-bearing strata, regolith, permafrost, and brine reservoirs. Target products depend on source composition and include water, carbon dioxide, carbon monoxide, ammonia, methane, sulfur dioxide, helium-3 (from solar-wind-implanted regolith), and other trapped volatiles. Applicable to polar ice deposits, cometary bodies, icy moon shells, and subsurface oceans.
-- **Hydrocarbon Harvest** — Collection and separation of liquid hydrocarbons from surface bodies, principally Titan's methane–ethane seas. Yields methane, ethane, and dissolved nitrogen. Distinct from gas drilling (subsurface reservoirs) and atmosphere separation (gaseous phases).
+- **Hydrocarbon Collection** — Collection and separation of liquid hydrocarbons from surface bodies, principally Titan's methane–ethane seas. Yields methane, ethane, and dissolved nitrogen. Distinct from gas drilling (subsurface reservoirs) and atmosphere separation (gaseous phases).
 - **Ocean Extraction** — Recovery of dissolved minerals, salts, and fresh water from liquid ocean or brine bodies. On Earth, encompasses desalination, brine evaporation, and selective ion exchange for magnesium, lithium, bromine, and other dissolved species. On ocean worlds, targets water and dissolved solutes accessed via plumes, melt probes, or ice penetrators.
 - **Gas Drilling** — Subsurface well drilling and completion for gaseous hydrocarbon extraction. Yields methane and ethane as primary products with significant helium, nitrogen, and carbon dioxide co-production; hydrogen sulfide is captured and converted to elemental sulfur. Applicable on Earth; conceivably adaptable to subsurface volatile reservoirs elsewhere.
 - **Oil Drilling** — Subsurface well drilling and completion for liquid petroleum extraction. Yields crude oil and associated gas. Earth-only.
@@ -48,17 +51,22 @@ Notes:
 - **Precious Metals Mining** — Targeted extraction of gold, silver, and platinum-group-metal-bearing ores from crustal deposits. Earth-dominated; off-Earth PGM sourcing is expected primarily as a co-product of asteroidal iron–nickel refining rather than dedicated mining.
 - **Uranium Mining** — Extraction of uranium ores from crustal deposits using open-pit, underground, and in-situ leach methods. Some deposit types co-produce vanadium, copper, and rare-earth concentrates. Earth-only for the foreseeable future.
 - **Rare Earths Mining** — Extraction of rare-earth-bearing ores: bastnäsite, monazite, xenotime, ion-adsorption clays, and KREEP mineral separates (off-Earth). Co-produces thorium and uranium concentrates from monazite-bearing deposits.
+- **Sulfur Mining** — Recovery of elemental or mineralogical sulfur from volcanic, evaporite, or iron-sulfide-bearing strata. On Io, surface collection of native sulfur deposits. On asteroids, thermal decomposition of troilite (FeS → Fe + S), co-producing metallic iron.
+- **Organics Mining** — Recovery of solid organic and carbonaceous material from natural strata. Includes oil shale retorting on Earth, tholin collection on Titan, and separation of insoluble organic matter from carbonaceous chondrite, D-type, and U-type asteroid material and cometary bodies.
 - **Industrial Minerals Mining** — Extraction of non-metallic minerals used in construction, agriculture, and chemical processing: phosphate rock, potash, limestone, gypsum, clays, salt, sand and gravel, fluorspar, and borates. Co-produces rare-earth concentrates from heavy mineral sands and phosphate deposits.
 - **Stone Quarrying** — Extraction of bulk silicate rock as dimension stone, crushed aggregate, or industrial process feedstock.
 - **Regolith Quarrying** — Collection of loose surface fines and impact-generated debris. Primary bulk material source on airless bodies and Mars. Output serves as feedstock for construction, sintering, regolith processing, and soil conditioning.
-- **Organics Extraction** — Recovery of solid organic and carbonaceous material from natural strata. Includes oil shale retorting on Earth, tholin collection on Titan, and separation of insoluble organic matter from carbonaceous chondrite, D-type, and U-type asteroid material and cometary bodies.
-- **Sulfur Extraction** — Recovery of elemental or mineralogical sulfur from volcanic, evaporite, or iron-sulfide-bearing strata. On Io, surface collection of native sulfur deposits. On asteroids, thermal decomposition of troilite (FeS → Fe + S), co-producing metallic iron.
+
 
 ## Refining
 
 - **Oil Refining** — Fractional distillation, catalytic cracking, and hydroprocessing of crude oil. Primary products are liquid fuels, petrochemical naphtha for polymer feedstock, and industrial solvents. Hydrodesulfurization recovers elemental sulfur as a co-product. Earth-dominated.
 - **Iron-Nickel Refining** — Pyrometallurgical and hydrometallurgical processing of native iron–nickel alloy from asteroidal and other metallic sources. Separates the alloy into refined pig iron with recovery of cobalt, chromium, and copper, plus platinum-group metals and gold — potentially a primary off-Earth precious-metal source.
 - **Iron Ore Smelting** — Blast-furnace or direct-reduction processing of iron oxide ores to pig iron or direct-reduced iron using coke, coal, or carbon monoxide as reductant.
+- **Basic O₂ Steelmaking** — Conversion of pig iron to carbon and alloy steel in basic oxygen furnaces by blowing an oxygen lance through molten iron. Consumes coal via integrated coking (metallurgical coke as carbon source and supplemental fuel). Dominant primary steelmaking route on Earth. Rare-earth elements concentrate in coke-oven and blast-furnace residues and may be recoverable.
+- **H₂ Reduction Steelmaking** — Direct reduction of iron ores with hydrogen (Fe₂O₃ + 3H₂ → 2Fe + 3H₂O) followed by electric arc furnace refining. Produces water vapor rather than CO₂ as the reduction by-product.
+- **Electric Steelmaking** — Electric arc furnace melting and refining of pig iron, scrap steel, and/or direct-reduced iron. Lower carbon intensity than the basic oxygen route; primary recycling-based steelmaking pathway.
+- **Solar Steelmaking** — Direct solar-thermal reduction and melting using concentrated reflected sunlight as the primary heat source. Applicable at permanently or near-permanently sunlit locations such as lunar and Mercurian polar crater rims, or on mobile solar-rail platforms that track continuous sunlight on slowly rotating bodies.
 - **Aluminium Refining** — Bayer-process alumina extraction followed by Hall-Héroult electrolytic smelting on Earth. Off-Earth alternatives include carbothermal reduction and molten-salt electrolysis of anorthositic feedstock, which co-produce oxygen as a valuable by-product.
 - **Industrial Metals Refining** — Smelting, solvent extraction, and electrorefining of base-metal ores to produce refined copper, nickel, zinc, chromium, manganese, titanium, tin, tungsten, molybdenum, cobalt, and other industrial metals. Sulfide smelting generates sulfuric acid as a valuable co-product; electrorefining yields precious-metal-bearing anode slimes.
 - **Precious Metals Refining** — Fire assay, chlorination, solvent extraction, and electrorefining of precious-metal ores and intermediate concentrates (including anode slimes from base-metal refining) to produce refined gold, silver, and platinum-group metals.
@@ -66,35 +74,34 @@ Notes:
 - **Uranium Refining** — Leaching, solvent extraction, and fluorination of uranium ores through yellowcake (U₃O₈) to purified uranium hexafluoride at natural isotopic assay. Some ore types yield recoverable vanadium, molybdenum, and rare-earth co-products.
 - **Regolith Processing** — Bulk thermal, electrochemical, or carbothermic reduction of raw regolith to extract oxygen and metal–metalloid separates (iron, silicon, aluminium, titanium). Principal techniques include molten-oxide electrolysis (FFC Cambridge process or similar) and carbothermal reduction. Operates on unsorted regolith without prior ore beneficiation, making it a key early-stage ISRU pathway on the Moon, Mars, Mercury, and asteroids.
 - **Isotope Separation** — Cryogenic distillation, electrolysis cascade, or thermal-cycling methods to separate deuterium from hydrogen or water, and to purify helium-3 from bulk helium. Produces fusion-grade isotopic fuel.
-- **Basic O₂ Steelmaking** — Conversion of pig iron to carbon and alloy steel in basic oxygen furnaces by blowing an oxygen lance through molten iron. Consumes coal via integrated coking (metallurgical coke as carbon source and supplemental fuel). Dominant primary steelmaking route on Earth. Rare-earth elements concentrate in coke-oven and blast-furnace residues and may be recoverable.
-- **H₂ Reduction Steelmaking** — Direct reduction of iron ores with hydrogen (Fe₂O₃ + 3H₂ → 2Fe + 3H₂O) followed by electric arc furnace refining. Produces water vapor rather than CO₂ as the reduction by-product.
-- **Electric Steelmaking** — Electric arc furnace melting and refining of pig iron, scrap steel, and/or direct-reduced iron. Lower carbon intensity than the basic oxygen route; primary recycling-based steelmaking pathway.
-- **Solar Steelmaking** — Direct solar-thermal reduction and melting using concentrated reflected sunlight as the primary heat source. Applicable at permanently or near-permanently sunlit locations such as lunar and Mercurian polar crater rims, or on mobile solar-rail platforms that track continuous sunlight on slowly rotating bodies.
 - **Recycling** — Mechanical shredding, magnetic and eddy-current separation, pyrometallurgical recovery, and chemical dissolution of end-of-life equipment, process scrap, and mixed waste streams. Recovers ferrous and non-ferrous metals, polymers, glass, and rare earths. Essential for mass-closure in space habitats and off-Earth settlements where resupply is constrained.
 - **Uranium Fuel Reprocessing** — Aqueous (PUREX) or pyrochemical separation of irradiated LEU and HEU fuel assemblies to recover uranium and transuranic actinides for re-fabrication into fresh fuel. Concentrates fission products into vitrified high-level waste. Extends fissile resource utilization by an order of magnitude or more.
 - **Thorium Fuel Reprocessing** — Aqueous (THOREX) or pyrochemical separation of irradiated thorium-cycle fuel assemblies to recover bred ²³³U and residual thorium for re-fabrication. Concentrates fission products into high-level waste. Requires remote handling due to hard-gamma ²³²U contamination.
+
 
 ## Conversions/Synthesis
 
 - **Water Electrolysis** — Electrochemical splitting of water: 2H₂O → 2H₂ + O₂. PEM, alkaline, and solid-oxide variants. Fundamental ISRU process throughout the solar system for producing propellant, industrial hydrogen, and breathing oxygen.
 - **CO₂ Electrolysis** — Solid-oxide electrochemical splitting of carbon dioxide: 2CO₂ → 2CO + O₂. Key Mars ISRU process; also applicable to Venus atmospheric processing. Produces carbon monoxide for downstream Fischer-Tropsch synthesis and oxygen for life support or propellant use.
-- **Fischer-Tropsch Process** — Catalytic conversion of synthesis gas to liquid hydrocarbons: nCO + (2n+1)H₂ → CₙH₂ₙ₊₂ + nH₂O. Produces synthetic liquid fuels from any CO + H₂ source, with recyclable water as a co-product. Key pathway for synthesizing storable propellant and chemical feedstock from ISRU-derived syngas.
-- **Sabatier Process** — Catalytic methanation: CO₂ + 4H₂ → CH₄ + 2H₂O. Converts carbon dioxide and hydrogen to methane and water. Core Mars propellant-production process; also useful as a CO₂ recycling step in closed life-support systems.
-- **Steam Reforming** — Catalytic conversion of methane and steam to synthesis gas: CH₄ + H₂O → CO + 3H₂. Primary industrial hydrogen production pathway on Earth.
 - **Methane Pyrolysis** — Thermal or catalytic decomposition of methane: CH₄ → C(s) + 2H₂. Produces hydrogen without CO₂ emissions; solid carbon co-product is usable in composites, electrodes, or carbon-fiber precursor stock. Emerging technology on Earth; potentially valuable off-Earth where solid carbon is scarce.
+- **CO₂ Methanation** — Sabatier reaction; catalytic methanation: CO₂ + 4H₂ → CH₄ + 2H₂O. Converts carbon dioxide and hydrogen to methane and water. Core Mars propellant-production process; also useful as a CO₂ recycling step in closed life-support systems.
+- **Steam Methane Reforming** — Catalytic conversion of methane and steam to synthesis gas: CH₄ + H₂O → CO + 3H₂. Primary industrial hydrogen production pathway on Earth.
 - **Water-Gas Shift** — Catalytic equilibrium reaction: CO + H₂O → CO₂ + H₂. Adjusts syngas composition to maximize hydrogen yield downstream of gasification or reforming.
 - **Reverse Water-Gas Shift** — Catalytic conversion: CO₂ + H₂ → CO + H₂O. Mars ISRU route to produce carbon monoxide feedstock for Fischer-Tropsch synthesis from atmospheric CO₂ and electrolysis-derived hydrogen.
-- **Haber-Bosch Process** — High-pressure catalytic synthesis: N₂ + 3H₂ → 2NH₃. Produces ammonia from atmospheric or extracted nitrogen and hydrogen. Foundational for fertilizer and industrial chemical production. Off-Earth, nitrogen supply (from Titan, Mars, or Venus atmospheres, or from ammonia-bearing icy bodies) is the principal constraint.
-- **Methanol Synthesis** — Catalytic hydrogenation of carbon monoxide or carbon dioxide: CO₂ + 3H₂ → CH₃OH + H₂O (or CO + 2H₂ → CH₃OH). Produces methanol as a versatile chemical intermediate, solvent, and potential fuel. Downstream methanol-to-olefins conversion can substitute for petrochemical naphtha in polymer production.
+- **Liquid Hydrocarbons Synthesis** — Fischer–Tropsch process; catalytic conversion of synthesis gas to liquid hydrocarbons: nCO + (2n+1)H₂ → CₙH₂ₙ₊₂ + nH₂O. Produces synthetic liquid fuels from any CO + H₂ source, with recyclable water as a co-product. Key pathway for synthesizing storable propellant and chemical feedstock from ISRU-derived syngas.
+- **CO₂ Methanol Synthesis** — Catalytic hydrogenation of carbon dioxide: CO₂ + 3H₂ → CH₃OH + H₂O. Produces methanol as a versatile chemical intermediate, solvent, and potential fuel. Downstream methanol-to-olefins conversion can substitute for petrochemical naphtha in polymer production.
+- **CO Methanol Synthesis** — Catalytic hydrogenation of carbon monoxide or carbon dioxide: CO + 2H₂ → CH₃OH. Produces methanol as a versatile chemical intermediate, solvent, and potential fuel. Downstream methanol-to-olefins conversion can substitute for petrochemical naphtha in polymer production.
+- **Ammonia Synthesis** — Haber-Bosch process; high-pressure catalytic synthesis: N₂ + 3H₂ → 2NH₃. Produces ammonia from atmospheric or extracted nitrogen and hydrogen. Foundational for fertilizer and industrial chemical production. Off-Earth, nitrogen supply (from Titan, Mars, or Venus atmospheres, or from ammonia-bearing icy bodies) is the principal constraint.
+- **Polymer Synthesis** — Polymerization of monomers (ethylene, propylene, vinyl chloride, styrene, and others) derived from petrochemical cracking, Fischer-Tropsch intermediates, or methanol-to-olefins conversion. Produces thermoplastics, thermosets, elastomers, and synthetic fibers.
 - **Industrial Chemicals Synthesis** — Production of commodity chemicals: chlor-alkali electrolysis (NaOH, Cl₂, H₂), sulfuric acid contact process (2SO₂ + O₂ → 2SO₃ → H₂SO₄), nitric acid oxidation (NH₃ → HNO₃), phosphoric acid digestion, soda ash, and downstream inorganic intermediates. Consumes ammonia, sulfur, industrial minerals, water, and hydrocarbon feedstocks.
 - **Fine Chemicals Synthesis** — Production of specialty chemicals, catalysts, coatings, adhesives, electronic-grade reagents, agrochemicals, surfactants, and pharmaceutical intermediates from commodity chemical and hydrocarbon feedstocks. Requires high-purity inputs and controlled processing environments.
-- **Polymer Synthesis** — Polymerization of monomers (ethylene, propylene, vinyl chloride, styrene, and others) derived from petrochemical cracking, Fischer-Tropsch intermediates, or methanol-to-olefins conversion. Produces thermoplastics, thermosets, elastomers, and synthetic fibers.
 - **Concrete Production** — Calcination of limestone to clinker, grinding with gypsum and pozzolanic additives, and mixing with aggregate and water. Off-Earth variants include sintered-regolith binders and sulfur concrete (elemental sulfur as binder, viable in vacuum and low-temperature environments). Conventional calcination co-produces CO₂.
 - **Glass/Ceramics Production** — Melting and forming of silicate feedstock with fluxes and modifiers to produce flat glass, fiber glass, technical ceramics, and refractory products. Off-Earth, basaltic regolith can serve as a near-complete glass and ceramic feedstock.
 - **Semiconductor Processing** — Crystal growth (Czochralski or float-zone), wafer fabrication, epitaxial deposition, and ultra-high-purity refining of silicon, gallium arsenide, silicon carbide, and compound semiconductors. Requires fine chemicals and ultra-clean processing environments.
 - **Composite Production** — Fiber-reinforced polymer layup, filament winding, pultrusion, and curing; metal-matrix composite forming. Combines polymer or metal matrix with glass fiber, carbon fiber (pyrolyzed from polymer precursors or organic feedstock), or aramid reinforcement.
 - **Solid Fuel Production** — Mixing, casting, and curing of solid rocket propellant from ammonium perchlorate oxidizer, aluminium powder, and polymer binder, including grain geometry design for thrust profiling.
 - **Fertilizer Production** — Compounding and granulation of ammonia, phosphate rock, potash, sulfur-derived acids, and micronutrients into blended NPK and specialty fertilizer products.
+
 
 ## Manufacturing
 
@@ -118,6 +125,7 @@ Notes:
 - **Thorium Fuel Manufacturing** — Conversion of thorium dioxide powder and fissile seed material (recycled ²³³U from thorium fuel reprocessing, or enriched uranium for initial cores) into mixed-oxide fuel pellets, loading into Zircaloy-4 cladding, and assembly into fuel bundles for thorium-cycle reactors.
 - **Consumer Goods Manufacturing** — Mass production of furniture, clothing, housewares, paper products, hygiene products, and building finishes from polymers, steel, textiles, wood products, and glass.
 - **Specialty Goods Manufacturing** — Production of high-value, low-mass items: premium personal electronics, jewelry, art objects, luxury fashion, and recreational equipment.
+
 
 ## Biological
 
