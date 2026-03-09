@@ -10,11 +10,11 @@ Notes:
 6. Manufactured/fabricated resources are considered to include their component resources. E.g., Composite Structures includes Polymers, Composites, Technical Textiles, etc.; Robotics includes Steel, Aluminium, Industrial Metals, Electronics, etc.; Packaged Meals includes Crop Products, Animal Products, Polymers, Aluminium, etc. Extractable resources are treated as exclusive masses in natural body composition, but may be part of the composition of downstream products.
 7. All physical resources including catchall categories are abstracted as singular commodities with a common price by weight.
 8. Fixed infrastructure and large transport vehicles (e.g., heavy rockets) are handled separately, although they are fabricated from resources here.
-9. See General Instructions note 5 for data table name construction (.tsv files only). Abbreviations to use for items here are: INDUSTRIAL → INDUST, MATERIALS → MAT, and PRODUCTS → PROD. Examples: Helium-3 → HELIUM_3, Industrial Metal Ores → INDUST_METAL_ORES, etc.
+
 
 ## Energy
 
-*Primary inputs to power generation and/or propulsion systems (excluding oxygen and non-energetic propellants). Many have other industrial uses.*
+*Primary inputs to power generation and/or propulsion systems (excluding oxygen and non-energetic propellants) and spent nuclear fuel assemblies.*
 
 - **Hydrogen** — H₂. H 100. Extractable.
 - **Methane** — CH₄. C 74.9, H 25.1. Extractable.
@@ -29,8 +29,13 @@ Notes:
 - **Thorium Fuel** — Mixed-oxide fuel assembly (speculative); (Th,²³³U)O₂ pellets with ~3.5% ²³³U seed in Zircaloy-4 cladding; ref. Indian AHWR-type fuel bundle (80/17.5/2.5 fuel/Zircaloy/SS by mass). Th 67.8, Zr 17.2, O 9.8, U 2.5 (isotopic: 100% U-233), Fe 1.7, Cr 0.45, Sn 0.26, Ni 0.25, other 0.04.
 - **Deuterium** — ²H₂ (D₂). Separable from hydrogen or water in refining processes (see note 5). H 100.
 - **Helium-3** — ³He extracted as a trace component of He from natural gas (Earth), solar-wind-implanted regolith (Moon, asteroids), or gas giant atmospheres. ³He/⁴He by number: protosolar, ~1.66 × 10⁻⁴; lunar regolith (solar wind), ~4.6 × 10⁻⁴; Earth atmospheric, 1.384 × 10⁻⁶; Earth crustal, ~0.01–0.1 of Earth atmospheric. He 100. Extractable.
+- **Spent Uranium Fuel** — Irradiated LWR and naval reactor fuel assemblies after discharge; ref. PWR spent fuel at ~50 GWd/tHM burnup, cooled ≥5 years, in original Zircaloy cladding. Approximately 96% of initial uranium remains and is recoverable via reprocessing. U 65.9 (isotopic: ~0.8% U-235, ~0.5% U-236, ~98.7% U-238), Zr 17.2, O 9.5, FP 3.6, Fe 1.6, Pu 0.85, Cr 0.45, Sn 0.26, Ni 0.25, minor actinides (Np, Am, Cm) 0.15, other 0.24.
+- **Spent Thorium Fuel** — Irradiated thorium-cycle fuel assemblies after discharge; ref. AHWR-type fuel at ~40 GWd/tHM burnup, in original Zircaloy cladding. Contains bred ²³³U recoverable via reprocessing; ²³²U trace contamination drives hard-gamma dose requiring remote handling. Th 65.5, Zr 17.2, O 9.8, FP 2.5, U 2.2 (primarily ²³³U), Fe 1.7, Cr 0.45, Sn 0.26, Ni 0.25, Pa 0.1, other 0.04.
+
 
 ## Ores
+
+*Ores and other solid extractable resources.*
 
 - **Iron-Nickel** — Native Fe-Ni metal; ref. M-type asteroid alloy (Psyche-class). Fe 91, Ni 8, Co 0.5, P 0.2, S 0.15, C 0.1, Cr 0.05. Byproducts (ppm): Ge 150, Cu 150, Ga 20, Pt 15, Ru 5, Pd 3, Os 3, Ir 2, Au 1.5, Rh 1.5, W 1.5. Extractable.
 - **Iron Ores** — Fe oxide/hydroxide; ref. blend of Earth magnetite-hematite concentrate and lunar ilmenite + Martian hematite. Grade: 55% Fe. Fe 55, O 29, Ti 7, Si 2.5, Mg 1.1, Al 1.1, S 0.6, Ca 0.6, Mn 0.5, Cr 0.2, Cl 0.15, P 0.05, other 2.2. Byproducts (ppm): V 300, Zr 100, Ni 50, Co 20, Sc 15, Hf 2. Extractable.
@@ -45,7 +50,10 @@ Notes:
 - **Stone** — Bulk silicate rock, natural or as dimension stone; ref. primitive mantle pyrolite. O 44, Mg 23, Si 21, Fe 6, Ca 2.5, Al 2.3, Na 0.3, Cr 0.3, Ni 0.2, other (Ti, Mn, K, P) 0.4. Extractable.
 - **Regolith** — Surface fines and debris (includes overburden and gangue from mining operations); ref. generic basalt (Moon/Mars/MORB average). O 44, Si 22, Fe 11, Ca 7, Al 7, Mg 5, Na 1.5, Ti 1.5, other (K, Mn, Cr, P) 1. Extractable.
 
+
 ## Volatiles
+
+*Extractable, purified, and/or synthesized volatiles.*
 
 - **Water** — H₂O. H 11.2, O 88.8. Extractable.
 - **Oxygen** — O₂. O 100. Extractable.
@@ -61,7 +69,10 @@ Notes:
 - **Industrial Chemicals** — Commodity chemicals: acids, bases, oxidizers, solvents, industrial gases (Cl₂, HF, etc.); ref. production-weighted blend of H₂SO₄, NaOH, Cl₂, Na₂CO₃, methanol, HNO₃, HCl, H₃PO₄, and other commodity intermediates. O 45, C 18, Cl 10, S 9.5, Na 8, H 5, N 2, P 1.7, other (F, Fe, Ca, K, B) 0.8.
 - **Fine Chemicals** — Specialty chemicals, catalysts, coatings, adhesives, electronic-grade reagents; ref. production-weighted blend of specialty coatings, agrochemicals, surfactants, catalysts, adhesives, and electronic chemicals. C 40, O 22, H 6, Ti 5, N 3, Cl 3, Si 3, S 3, F 2, Na 2, Al 1, P 1, Fe 1, other (Co, Pt, Pd, Rh, Zr, B, Ce) 8.
 
+
 ## Materials
+
+*Solid refined materials, industrial feedstocks, and waste products.*
 
 - **Iron** — Industrial pig iron; ref. blast-furnace pig iron, global production-weighted. Fe 93.5, C 4, Si 1, Mn 0.7, P 0.15, S 0.05, other (Cr, Ti, V, Cu) 0.6.
 - **Steel** — Carbon steel, alloy steel, stainless steel; ref. production-weighted global blend (~85% carbon, ~10% alloy, ~5% stainless). Fe 96.5, Cr 1, Mn 0.8, Ni 0.5, Si 0.3, C 0.3, Mo 0.1, other (V, W, Cu, N, S, P) 0.5.
@@ -78,14 +89,14 @@ Notes:
 - **Polymers** — Thermoplastics, thermosets, elastomers, synthetic fibers; ref. production-weighted blend (PE ~30%, PP ~20%, PVC ~15%, PET ~8%, PS ~7%, PUR ~7%, other ~13%). C 73, H 10, Cl 8.5, O 5.5, N 1.2, S 0.5, F 0.5, other 0.8.
 - **Composites** — CFRP, GFRP, metal-matrix composites, aramid laminates; ref. production-weighted blend (GFRP ~70%, CFRP ~20%, aramid ~5%, MMC ~5%). C 39, O 31, Si 11, Ca 6.5, Al 4, H 2.5, N 1.5, Mg 1.5, B 0.7, Fe 0.3, other (Cr, F, Ti) 2.
 - **Technical Textiles** — High-performance fabrics; aramid, UHMWPE, carbon fiber cloth, PTFE membranes, glass fiber textiles, multilayer insulation, filtration media, spacesuit materials; ref. production-weighted blend. C 65, O 21, H 7, N 3, F 1.5, Si 1, other (Ca, Al, B, Mg, Fe, Na, S, Cl) 1.5.
+- **Municipal Waste** — Post-consumer mixed solid waste from households, commercial establishments, and service sectors: discarded packaging, waste paper and cardboard, worn textiles, broken housewares, spent small consumer items, food-contaminated non-recyclable materials, and miscellaneous refuse. Distinct from Industrial Waste (manufacturing and process origin) and Biowaste (biological and organic origin). Ref. production-weighted blend of developed-nation MSW composition after food-waste diversion (~30% paper/cardboard, ~20% plastics, ~7% glass, ~7% ferrous metals, ~7% textiles, ~6% wood, ~3% non-ferrous metals, ~3% rubber/leather, ~17% other composites, ceramics, and miscellaneous). C 39, O 29, H 6, Fe 6.5, Si 4, Al 3, Cl 2, Ca 1.5, Na 1, N 0.5, Cu 0.3, other (Mg, Zn, Cr, Mn, S, K, Ti, Sn, Ni, Pb) 7.2.
 - **Industrial Waste** — Scrap metal, slag, fly ash, spent catalysts, recyclable mixed waste; ref. production-weighted blend (~40% fly ash, ~30% slag, ~20% scrap metal, ~10% other). O 32, Fe 20.5, Si 15.5, Ca 10, Al 7.5, Mg 2, C 1, Cu 0.7, other (Na, K, Ti, Mn, S, Cl, Zn, Cr) 10.8.
-- **Spent Uranium Fuel** — Irradiated LWR and naval reactor fuel assemblies after discharge; ref. PWR spent fuel at ~50 GWd/tHM burnup, cooled ≥5 years, in original Zircaloy cladding. Approximately 96% of initial uranium remains and is recoverable via reprocessing. U 65.9 (isotopic: ~0.8% U-235, ~0.5% U-236, ~98.7% U-238), Zr 17.2, O 9.5, FP 3.6, Fe 1.6, Pu 0.85, Cr 0.45, Sn 0.26, Ni 0.25, minor actinides (Np, Am, Cm) 0.15, other 0.24.
-- **Spent Thorium Fuel** — Irradiated thorium-cycle fuel assemblies after discharge; ref. AHWR-type fuel at ~40 GWd/tHM burnup, in original Zircaloy cladding. Contains bred ²³³U recoverable via reprocessing; ²³²U trace contamination drives hard-gamma dose requiring remote handling. Th 65.5, Zr 17.2, O 9.8, FP 2.5, U 2.2 (primarily ²³³U), Fe 1.7, Cr 0.45, Sn 0.26, Ni 0.25, Pa 0.1, other 0.04.
 - **Radioactive Waste** — Vitrified high-level waste from fuel reprocessing, cemented intermediate-level waste (activated structural materials, process residues, decommissioning waste), and conditioned operational waste; excludes intact spent fuel assemblies (tracked separately as Spent Uranium Fuel and Spent Thorium Fuel). Ref. blend of cemented ILW (~80%) and vitrified HLW (~20%). O 41, Si 13, Fe 12.5, Ca 11.5, Al 3.7, C 2.4, Na 2.2, Mg 1.6, B 0.9, H 0.8, K 0.4, actinides/FP 3.5, other (Li, S, Ti, Mn, Zr) 6.5.
+
 
 ## Manufactured
 
-*Fabricated goods — end products or inputs to further assembly, construction, or operations.*
+*Fabricated end products or inputs to further assembly, construction, or operations.*
 
 - **Steel Structures** — Beams, plates, pressure vessels, pipe, prefab modules; ref. fabricated structural steel with galvanized and coated fractions. Fe 95, Cr 1, Mn 0.8, C 0.5, Ni 0.5, Zn 0.5, Si 0.3, other (Mo, V, Cu, W, N, S, P) 1.4.
 - **Aluminium Structures** — Sheet, extrusions, pressure shells, lightweight frames; ref. fabricated wrought aluminium assemblies with fasteners and sealants. Al 93, Si 1.5, Cu 1, Mg 1, Fe 0.5, Zn 0.3, Cr 0.3, Ti 0.2, Mn 0.2, other (Ni, polymer sealants) 2.
@@ -102,6 +113,7 @@ Notes:
 - **Batteries** — Batteries, fuel cells, supercapacitors, other energy storage; ref. production-weighted blend of Li-ion cells (NMC ~45%, LFP ~45%, NCA/other ~10%) including cell casing and electrode assemblies. C 25, O 16, Al 10, Cu 9, Fe 8, Ni 6, P 4, F 3, Li 2, Co 2, Mn 2, H 1.5, other (Sn, Si, Ti, Zr, Na) 11.5.
 - **Consumer Goods** — Mass-produced everyday goods; furniture, clothing, housewares, paper products, personal care products, building finishes; ref. production-weighted blend. C 44, O 23, Fe 10, H 6, Si 3, Cl 3, Al 1.5, Na 1, Ca 1, Cu 1, N 0.5, Zn 0.5, other (Cr, Ni, Mn, Mg, Ti, S, P, K, Sn) 5.5.
 - **Specialty Goods** — High-value, low-mass luxury and specialty items; premium personal electronics, jewelry, art, premium fashion, recreational equipment; ref. estimated blend. C 30, O 18, Fe 10, Al 7, Cu 6, Si 6, H 4, Cr 2, Ni 2, N 1.5, Na 1.5, Cl 1, Ca 1, Zn 1, other (Sn, Ag, Au, Ti, Mo, Mg, S, P, F, Co, Mn, K, Pt, Pd) 9.
+
 
 ## Biological
 
@@ -120,4 +132,4 @@ Notes:
 - **Pharmaceuticals** — Drugs, vaccines, biologics, medical compounds; ref. production-weighted blend including active ingredients, excipients (cellulose, lactose, starch), and primary packaging (glass, plastic, foil). C 30, O 50, H 6, Si 2, N 1, Na 1, Al 1, Ca 0.5, Fe 0.5, Cl 0.5, other (K, Mg, S, P, Ti, F) 7.5.
 - **Fertilizers** — NPK compounds, micronutrient mixes, soil amendments; ref. production-weighted blend of urea (~35%), DAP/MAP (~15%), potash KCl (~15%), ammonium nitrate (~15%), superphosphates (~5%), and other amendments (~15%). O 33, N 25.5, K 8, Cl 7, C 7, P 5.5, H 4.5, Ca 2, S 1, other (Mg, Na, Fe, Mn, Zn, B, Cu) 6.5.
 - **Soil/Growth Media** — Terrestrial soil, compost, hydroponic substrates, amended regolith; ref. enriched loamy topsoil with organic matter and amendments. O 47.5, Si 21.5, Al 6, C 6, Fe 3.5, Ca 3, H 2.5, Mg 2, K 2, Na 0.8, Ti 0.7, N 0.4, other (Mn, P, S, Cl) 4.1.
-- **Biowaste** — Organic waste, sewage sludge, crop residue; ref. blend of municipal organic waste, agricultural residue, and sewage sludge. O 48, C 30, H 7, Si 2.5, N 1.5, Ca 1.5, K 1, Fe 1, Al 0.8, P 0.5, S 0.5, Na 0.3, Mg 0.3, Cl 0.2, other (Mn, Ti, Zn) 4.4.
+- **Biowaste** — Organic waste, sewage sludge, food waste, human and animal metabolic waste, and crop residue; ref. blend of municipal organic waste, agricultural residue, and sewage sludge. O 48, C 30, H 7, Si 2.5, N 1.5, Ca 1.5, K 1, Fe 1, Al 0.8, P 0.5, S 0.5, Na 0.3, Mg 0.3, Cl 0.2, other (Mn, Ti, Zn) 4.4.
