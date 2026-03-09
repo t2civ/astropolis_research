@@ -1,0 +1,5 @@
+I want you to develop the context file modules.md. The goal is to include (as abstract simplifications) all of the physical infrastructure needed to carry out operations listed in physical_operations.md.
+
+The file modules.md already has some listed items, some with notes in brackets. Existing items are provided as examples. You can modify these if needed. (In the case of "drilling" and "mining", the exact strata targets are necessary as an implementation requirement.) Consider and then delete the individual notes in brackets. Each item needs a very brief description analogous to descriptions in other files, following General Instructions 6. Where it makes sense, described the module as a unit (e.g., a utility-scale power plant). Where that doesn't make sense, describe it in some other way (e.g., "Represents distributed ...").
+
+This is a first pass only. We'll improve the list in later passes. I don't have specific number requirements at this time, but try to keep the abstraction level similar to that in other files.

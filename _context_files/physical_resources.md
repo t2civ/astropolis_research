@@ -2,14 +2,13 @@
 
 Notes:
 
-1. The 6 groupings here are for organization and display only; functional effects in the simulation are handled by individual item properties (although these coincide with groupings in some cases).
-2. Elemental compositions are for reference only. Industrial inputs should be considered as highly fungible when resource input or composition isn't explicit. E.g., "concrete" is broadly defined and almost always produced from local bulk extraction products.
-3. "Extractable" means that the resource exists in natural bodies at least somewhere and may be a target of extraction (excluding biological targets), possibly in addition to other sourcing. Resources not marked as extractable must be sourced from refining, manufacturing, agriculture, aquaculture, forestry, etc.
-4. Deuterium (D₂) is treated as a downstream refined product of water or hydrogen, not as a separate extractable resource. In contrast, Helium-3 (³He) is a separate "extractable" resource. The different treatment is due to Helium-3's much higher fractional variation (relative to the bulk isotope) among different natural strata.
-5. Some resources are abstractions for both the extracted and refined product at the same time, e.g., Sulfur, Industrial Minerals, Stone, and most volatiles. Others have separate extracted and refined variants.
-6. Manufactured/fabricated resources are considered to include their component resources. E.g., Composite Structures includes Polymers, Composites, Technical Textiles, etc.; Robotics includes Steel, Aluminium, Industrial Metals, Electronics, etc.; Packaged Meals includes Crop Products, Animal Products, Polymers, Aluminium, etc. Extractable resources are treated as exclusive masses in natural body composition, but may be part of the composition of downstream products.
-7. All physical resources including catchall categories are abstracted as singular commodities with a common price by weight.
-8. Fixed infrastructure and large transport vehicles (e.g., heavy rockets) are handled separately, although they are fabricated from resources here.
+1. Elemental compositions are for reference only. Industrial inputs should be considered as highly fungible when resource input or composition isn't explicit. E.g., "concrete" is broadly defined and almost always produced from local bulk extraction products.
+2. "Extractable" means that the resource exists in natural bodies at least somewhere and may be a target of extraction (excluding biological targets), possibly in addition to other sourcing. Resources not marked as extractable must be sourced from refining, manufacturing, agriculture, aquaculture, forestry, etc.
+3. Deuterium (D₂) is treated as a downstream refined product of water or hydrogen, not as a separate extractable resource. In contrast, Helium-3 (³He) is a separate "extractable" resource. The different treatment is due to Helium-3's much higher fractional variation (relative to the bulk isotope) among different natural strata.
+4. Some resources are abstractions for both the extracted and refined product at the same time, e.g., Sulfur, Industrial Minerals, Stone, and most volatiles. Others have separate extracted and refined variants.
+5. Manufactured/fabricated resources are considered to include their component resources. E.g., Composite Structures includes Polymers, Composites, Technical Textiles, etc.; Robotics includes Steel, Aluminium, Industrial Metals, Electronics, etc.; Packaged Meals includes Crop Products, Animal Products, Polymers, Aluminium, etc. Extractable resources are treated as exclusive masses in natural body composition, but may be part of the composition of downstream products.
+6. All physical resources including catchall categories are abstracted as singular commodities with a common price by weight.
+7. Fixed infrastructure, large rockets, and large off-Earth transport vehicles are handled separately (although they are fabricated from resources here).
 
 
 ## Energy

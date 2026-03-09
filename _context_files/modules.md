@@ -1,26 +1,27 @@
 # Modules
 
+Modules are the physical infrastructure that implement operations.
+
 Notes:
 
-1. The 6 groupings here are for organization and display only; functional effects in the simulation are handled by individual item properties (although these coincide with groupings in some cases).
-2. Modules have a many-to-many relationship with operations. Each module provides capacity for one or more operations. Each operation is enabled by one or more modules. (In practice, many specific cases are one-to-one.) 
-3. Although described here in terms of individual units, modules are implemented as a continuous "capacity" value.
-4. A module's capacity can be shifted ("converted") among its enabled operations. E.g., Combustion Power Plant (which really represents a capacity of combustion plants) could be shifted from 70/30 proportional Coal/Methane Power to 40/60 over time. Speed and cost of conversion are fixed properties of each module. This could represent anything from a major refitting/retooling/relocation to a minor operational adjustment, depending on the module.
+1. Modules can have a many-to-many relationship with operations. Each module provides capacity for one or more operations. Each operation is enabled by one or more modules. (In practice, many specific cases are one-to-one.) 
+2. Although described here in terms of individual units, modules are implemented as a continuous "capacity" value.
+3. A module's capacity can be shifted ("converted") among its enabled operations. E.g., Combustion Power Plant (which really represents a capacity of combustion plants) could be shifted from 70% Coal Power / 30% Methane Power to 40/60 over time. Speed and cost of conversion are fixed properties of each module. This could represent anything from a major refitting/retooling/relocation to a minor operational adjustment, depending on the module.
 
 
 ## Energy
 
 - **Solar Farm** — [Utility-scale solar.]
-- **Solar Arrays** — [Distributed solar power.]
+- **Solar Arrays** — [Small-scale and/or distributed solar power.]
 - **Geothermal Plant** — 
 - **Hydroelectric Dam** — 
 - **Wind Farm** — 
 - **Tidal Power Station** — 
 - **Combustion Power Plant** — [Possible to convert between fuel types. All of the electricity- and heat-generating modules should include the text "May provide facility or district heat.".]
-- **Utility Fuel Cells** — [Possible to convert between fuel types.]
+- **Utility Fuel Cells** — [Possible to convert between fuel types. Conversion here may represent switching out individual units over time.]
 - **Distributed Fuel Cells** — [Possible to convert between fuel types.]
 - **LEU Nuclear Plant** — 
-- **HEU Nuclear Reactor** — 
+- **HEU Nuclear Reactor** — [Likely represents a smaller naval or space power system than above.]
 - **Thorium Nuclear Plant** — 
 - **D-T Fusion Plant** — 
 - **D-³He Fusion Plant** — 
@@ -39,17 +40,12 @@ Notes:
 - **Mine (near-surface)** — 
 - **Mine (subsurface)** — 
 - **Mine (deep subsurface)** — 
-- **Quarry** — [Surface only.]
+- **Quarry** — [Surface only for harvesting Stone and/or Regolith.]
 
 
 ## Refining
 
 - **Oil Refinery** — 
-- **** — 
-- **** — 
-- **** — 
-- **** — 
-
 
 
 ## Conversions/Synthesis

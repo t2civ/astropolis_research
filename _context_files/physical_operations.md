@@ -2,20 +2,17 @@
 
 Notes:
 
-1. The 6 groupings here are for organization and display only; functional effects in the simulation are handled by individual item properties (although these coincide with groupings in some cases).
-2. Extraction operations are further subdivided within the simulation by target strata, so each listed here really represents several or possibly many different operations internally. Efficiency and output is entirely dependent on the specific strata in these cases.
-3. Non-extraction operations are fixed in their input and output resource ratios (although energy efficiency may vary). For these we have separately listed operations to simulate different resource streams. Fungibility in the simulation is handled by having multiple operations that use the same infrastructure (the same "module" in simulation terms); modules can shift operation proportions in response to resource prices or other factors. 
-4. Infrastructure & Construction is a resource sink: it uses resources but generates infrastructure which is handled outside the resource model. Yards & Transport Manufacturing is a partial resource sink: it uses resources and generates both Transport Systems (a resource) and large rockets and transport vehicles handled outside the resource model.
-5. Electricity and heat are handled separately outside of the physical resources list.
-6. The simulation includes resources sources, sinks, and conversions that aren't represented here as operations:
-   - Infrastructure and large rockets/transport vehicles are simulated outside of the resource system (hence the respective operations are resource sinks).
-   - Infrastructure and manufactured items go out of service. These can either sit in place and do nothing (e.g., an abandoned station or a garbage heap on the Moon) or flow back into the resource model as Industrial Waste.
+1. Extraction operations are further subdivided within the simulation by target strata, so each listed here really represents several or possibly many different operations internally. In these operations, output resources are entirely dependent on the specific strata.
+2. Non-extraction operations are fixed in their input and output resource ratios. For these we have separately listed operations to simulate different resource streams. Fungibility in the simulation is handled by having multiple operations that use the same module (i.e., the same infrastructure); modules can shift operation proportions in response to resource prices or other factors. 
+3. Electricity and heat are handled separately outside of the physical resources list.
+4. The simulation includes resources sources, sinks, and conversions that aren't represented here as operations:
+   - Infrastructure, large rockets, and large off-Earth transport vehicles are simulated outside of the resource system; hence the respective operations here act as resource sinks. (Yards & Transport Manufacturing is only a partial sink since it also generates the resource Transport Systems.)
+   - Infrastructure and manufactured items that go out of service can either sit in place and do nothing (e.g., an abandoned station or a garbage heap on the Moon) or flow back into the resource model as Industrial Waste.
    - Populations consume food and goods and generate Biowaste and Municipal Waste.
+   - Natural systems convert resources outside of "operations". This includes processes such as Earth's water cycle and Earth's limited processing of waste streams. 
    - There is an "ecosystem services" process that can handle some amount of biological, household, and industrial waste, mainly on Earth (but possibly in other large ecosystems in the future).
-   - In much of the solar system, waste can just be dumped outside.
-6. "Natural" resource conversions (e.g., Earth's water cycle) are handled by a separate system in the simulation.
-7. There is a 7th group for "services" (not in this file) that handles intangible operations (i.e., conversions among non-physical resources).
-
+   - In much of the solar system, waste can just be dumped outside (although this is not usually the most efficient situation).
+5. Service operations are listed in a separate file; these handle conversions among non-physical (intangible) resources.
 
 
 ## Energy
