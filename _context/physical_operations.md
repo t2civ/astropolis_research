@@ -5,13 +5,12 @@ Notes:
 1. Extraction operations are further subdivided within the simulation by target strata, so each listed here really represents several or possibly many different operations internally. In these operations, output resources are entirely dependent on the specific strata.
 2. Non-extraction operations are fixed in their input and output resource ratios. For these we have separately listed operations to simulate different resource streams. Fungibility in the simulation is handled by having multiple operations that use the same module (i.e., the same infrastructure); modules can shift operation proportions in response to resource prices or other factors. 
 3. Electricity and heat are handled separately outside of the physical resources list.
-4. The simulation includes resources sources, sinks, and conversions that aren't represented here as operations:
-   - Infrastructure, large rockets, and large off-Earth transport vehicles are simulated outside of the resource system; hence the respective operations here act as resource sinks. (Yards & Transport Manufacturing is only a partial sink since it also generates the resource Transport Systems.)
-   - Infrastructure and manufactured items that go out of service can either sit in place and do nothing (e.g., an abandoned station or a garbage heap on the Moon) or flow back into the resource model as Industrial Waste.
+4. The simulation includes resources sinks, sources, and conversions that aren't represented here as operations:
+   - Infrastructure and Heavy Rockets/Transports are not available in the commodity trade system (so can never be inputs). They are "used up" locally to create fixed and mobile assets (respectively) handled individually in the simulation.
+   - Depending on location, dumps can accumulate (i.e., "store") waste products.
+   - Infrastructure and manufactured items that go out of service become Industrial Waste.
    - Populations consume food and goods and generate Biowaste and Municipal Waste.
-   - Natural systems convert resources outside of "operations". This includes processes such as Earth's water cycle and Earth's limited processing of waste streams. 
-   - There is an "ecosystem services" process that can handle some amount of biological, household, and industrial waste, mainly on Earth (but possibly in other large ecosystems in the future).
-   - In much of the solar system, waste can just be dumped outside (although this is not usually the most efficient situation).
+   - Natural systems convert resources outside of "operations". This includes Earth's water cycle and limited processing of waste streams.
 5. Service operations are listed in a separate file; these handle conversions among non-physical (intangible) resources.
 
 
@@ -116,8 +115,9 @@ Notes:
 
 ## Manufacturing
 
-- **Infrastructure & Construction** — On-site assembly, installation, and finishing of fixed structures: buildings, roads, bridges, tunnels, landing pads, launch infrastructure, power distribution networks, pipelines, life-support systems, radiation shielding, and pressurized habitats.
-- **Yards & Transport Manufacturing** — Design, fabrication, and final assembly of ground vehicles, aircraft, marine vessels, spacecraft, EVA mobility units, and spacesuits. Integrates structural, propulsion, avionics, and life-support subsystems.
+- **Construction** — On-site assembly, installation, and finishing of fixed structures: buildings, roads, bridges, tunnels, landing pads, launch infrastructure, power distribution networks, pipelines, life-support systems, radiation shielding, and pressurized habitats.
+- **Space Yards & Assembly** — Design, fabrication, and final assembly of heavy-lift launch vehicles and large interplanetary transports at dedicated yard facilities (analogous to naval shipyards). Encompasses hull and tank fabrication, main propulsion integration, power systems, avionics, life-support outfitting, and thermal protection installation at scales requiring heavy tooling, large-bay construction halls, and orbital or surface assembly infrastructure. Includes both ground-based launch-vehicle production and in-space assembly of interplanetary vessels.
+- **Transport Manufacturing** — Design, fabrication, and final assembly of ground vehicles, aircraft, marine vessels, small-to-medium spacecraft, EVA mobility units, and spacesuits. Integrates structural, propulsion, avionics, and life-support subsystems. Excludes final assembly of heavy-lift launch vehicles and large interplanetary transports.
 - **Steel Structures Manufacturing** — Cutting, welding, forming, galvanizing, and assembly of steel plate, beams, pipe, pressure vessels, and prefabricated modules for structural applications.
 - **Aluminium Structures Manufacturing** — Extrusion, rolling, machining, and joining of aluminium alloys into structural members, pressure shells, and lightweight frames.
 - **Composite Structures Manufacturing** — Autoclave and out-of-autoclave layup, filament winding, and assembly of composite panels, overwrapped pressure vessels, fairings, and inflatable habitat shells.
