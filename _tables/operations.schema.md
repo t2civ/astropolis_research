@@ -13,7 +13,7 @@
 - output_rates — A semicolon-delimited list of output resource rates (in t/h) for the operation.
 - mass_flow — Equals the sum of input_rates equals the sum of output_rates, within rounding precision.
 - fuel_rate — Energy group operations only. Total input rate excluding OXYGEN.
-- target_products — All groups except Energy. Target product(s) of the operation, which is sometimes a judgment call. For conversion operations where the valued outputs may be unclear or context dependent, use total output rate excluding explicit waste products such as INDUST_WASTE. E.g., for OIL_REFINING, we consider as value products LIQ_HYDROCARBONS, METHANE, CARBON, and SULFUR (only excluding INDUST_WASTE). For most synthesis, manufacturing, and biological operations, a single target product is usually obvious.
+- target_products — All groups except Energy. Target product(s) of the operation, which is sometimes a judgment call. For conversion operations where the valued outputs may be unclear or context dependent, use total output rate excluding explicit waste products such as INDUST_WASTE. For most synthesis, manufacturing, and biological operations, a single target product is usually obvious. Example: for OIL_REFINING, we consider as value products LIQ_HYDROCARBONS, METHANE, CARBON, and SULFUR (only excluding INDUST_WASTE).
 
 
 ## Notes
