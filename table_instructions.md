@@ -2,6 +2,8 @@
 
 All simulation data is imported via tab-delimited tables in .tsv files. Tables are either DB-style (database-like with entity rows and field columns) or Entity × Entity data matrices. These tables use bespoke formats as described below.
 
+Note: This file is very abbreviated! Full documentation is in the README.md file in I, Voyager's Tables plugin. This can be found locally in many Godot projects at C://godot/<project_name>/addons/ivoyager_tables (where project_name includes "planetarium" and "project_template") or remotely at https://github.com/ivoyager/ivoyager_tables.
+
 
 ## General Table Notes & Instructions
 
