@@ -1,22 +1,16 @@
 # Extractable Resources
 
+Extractable resources are a subset of physical resources (in physical_resources.md). Only these resources need to be considered for strata composition.
+
 Notes:
 
-1. "Extractable" resources are simplified model abstractions that are (at the same time):
-   * Output resources from extraction operations such as mining, drilling, and air separation, including beneficiation where applicable.
-   * The substances that completely define the composition of any natural body stratum by total mass. In this context, stone and regolith are usually the main "filler" material for solid strata. Ores represent total concentrated mass (usually much greater than what could be extracted economically) and volatiles represent what might be separated from solids in the extraction operation (sometimes a target product).
-   * Trade commodities priced by weight.
-   * Inputs to refining (to produce refined resources) or other industrial processes. Note that refined resources don't come from only one resource stream. For example, in an asteroid mining context, "precious metals" are refined mainly from "iron/nickel" since there are no significant deposits of "precious metal ores".
-2. Listed compositions are elemental weight percent (summing to 100) followed by valuable co- or by-products in ppm (or main product in the case of precious metals). **For composite items, these are representational only!** Different strata will necessarily have different "industrial metal ores", different "industrial minerals", different "stone", etc. This issue is especially acute for "industrial metal ores" and "industrial minerals". The simulation simplifies by treating composition within an abstract resource item as entirely fungible.
-3. Distribution of each extractable resource within a stratum is modeled by four internal parameters:
-   * `mass` — Total mass in the stratum (normalized to achieve correct total stratum mass).
-   * `mass_cv` — Epistemic uncertainty (CV) about the mass abundance.
-   * `dispersion` — Standard deviation of the lognormal distribution of the resource in log₁₀ units (simplified to cover all spatial scales). This is the principle factor that allows economical extraction in mining and drilling. For homogeneous strata like atmospheres, dispersion is 0.
-   * `dispersion_cv` — Epistemic uncertainty (CV) about the dispersion.
-4. Deuterium (D₂) is treated as a downstream refined product of water or hydrogen, not as a separate extractable resource. In contrast, Helium-3 (³He) is a separate "extractable" resource. The different treatment is due to Helium-3's much higher fractional variation (relative to the bulk isotope) among different natural strata.
-5. For data table construction of the "name" field, convert text to CONSTANT_CASE (capitalize and replace non-alphanumeric characters with underscores) and abbreviate INDUSTRIAL as INDUST. Examples: IRON_NICKEL, IRON_ORES, ALUMINIUM_ORES, INDUST_METAL_ORES, INDUST_MINERALS.
+1. Listed compositions are elemental weight percent (summing to 100) followed by valuable co- or by-products in ppm. IMPORTANT: For abstract composite resources such as Industrial Minerals and Stone, the elemental composition is for reference only. Different strata will necessarily have Industrial Minerals and Stone that differ from these references. The simulation simplifies by treating composition within an abstract resource as fungible.
+2. Natural strata are composed entirely by weight of these resources. In this context, Stone and Regolith are the main "fillers" for solid rocky strata. Ores represent total concentrated mass (usually much greater than what could be extracted economically) and volatiles represent what might be separated from solids in the extraction operation. Distribution of each resource within a stratum is modeled by abundance and dispersion, each having an epistemic uncertainty error.
+3. These resources also represent: a) the output product of extraction operations such as mining, drilling, and air separation, including beneficiation where applicable; b) trade commodities priced by weight; and c) inputs to refining (to produce refined resources) and/or other industrial processes. Exception: Wild Fisheries and Timber are converted to Animal Products and Lumber/Wood Products by their respective extraction operations.
+4. Deuterium (²H₂) is treated as a downstream refined product of water or hydrogen, not as a separate extractable resource. In contrast, Helium-3 (³He) is a separate "extractable" resource. The different treatment is due to Helium-3's much higher fractional variation (relative to the bulk isotope) among different natural strata.
 
-List:
+
+---
 
 - **Iron/Nickel** — Native Fe-Ni metal; ref. M-type asteroid alloy (Psyche-class). Fe 91, Ni 8, Co 0.5, P 0.2, S 0.15, C 0.1, Cr 0.05. Byproducts (ppm): Ge 150, Cu 150, Ga 20, Pt 15, Ru 5, Pd 3, Os 3, Ir 2, Au 1.5, Rh 1.5, W 1.5.
 - **Iron Ores** — Fe oxide/hydroxide; ref. blend of Earth magnetite-hematite concentrate and lunar ilmenite + Martian hematite. Grade: 55% Fe. Fe 55, O 29, Ti 7, Si 2.5, Mg 1.1, Al 1.1, S 0.6, Ca 0.6, Mn 0.5, Cr 0.2, Cl 0.15, P 0.05, other 2.2. Byproducts (ppm): V 300, Zr 100, Ni 50, Co 20, Sc 15, Hf 2.
@@ -46,3 +40,5 @@ List:
 - **Helium-3** — ³He extracted as a trace component of He from natural gas (Earth), solar-wind-implanted regolith (Moon, asteroids), or gas giant atmospheres. ³He/⁴He by number: protosolar, ~1.66 × 10⁻⁴; lunar regolith (solar wind), ~4.6 × 10⁻⁴; Earth atmospheric, 1.384 × 10⁻⁶; Earth crustal, ~0.01–0.1 of Earth atmospheric. He 100.
 - **Argon** — Ar. Ar 100.
 - **Heavy Noble Gases** — Kr, Xe, and Ne as co-product. Ref. Earth atmospheric mass ratio. Ne 77, Kr 20, Xe 3.
+- **Wild Fisheries** — Earth only; ref. production-weighted global marine and freshwater catch (whole organism, live weight). O 72, C 13, H 10.5, N 2.5, Ca 0.4, P 0.3, K 0.3, S 0.3, Na 0.2, Cl 0.15, Mg 0.03, Fe 0.01, other 0.31.
+- **Timber** — Earth only; ref. production-weighted global industrial roundwood (standing green wood, ~50% moisture). O 65.5, C 24.5, H 8.5, Ca 0.3, K 0.25, N 0.05, Mg 0.05, S 0.02, P 0.02, other 0.81.
