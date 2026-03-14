@@ -17,7 +17,7 @@ Full format documentation is in the I, Voyager Tables plugin README, found local
 
 ## Entity Naming
 
-Data table entities use CONSTANT_CASE: capitalized letters, digits, and underscores (omitting &, +, and other non-alphanumeric characters). Convert markdown entity names as needed.
+Data table entities use CONSTANT_CASE: capitalized letters, digits, and underscores (omitting &, +, and other non-alphanumeric characters). Convert descriptive file entity names as needed.
 
 Standard abbreviations:
 - INDUSTRIAL -> INDUST
@@ -31,7 +31,7 @@ Standard abbreviations:
 - ENVIRONMENT -> ENV
 - ATMOSPHERE -> ATMOS
 
-Examples: Helium-3 -> HELIUM_3, 3He-3He Fusion Power -> 3HE_3HE_FUSION_POWER, Industrial Recycling & Incineration -> INDUST_RECYC_INCINERATION. During table import, entity names are prefixed with type identifiers such as "RESOURCE_", "OPERATION_", etc.
+Examples: Helium-3 -> HELIUM_3, ³He-³He Fusion Power -> 3HE_3HE_FUSION_POWER, Industrial Recycling & Incineration -> INDUST_RECYC_INCINERATION. During table import, entity names are prefixed with type identifiers such as "RESOURCE_", "OPERATION_", etc.
 
 
 ## Data Types
@@ -47,7 +47,7 @@ Types are specified per field (DB-style) or per table (Entity x Entity):
 ## Units and Numbers
 
 - The importer handles most SI and many non-SI unit abbreviations including compound units (space = multiplication). Examples: "km", "g/cm^3", "t/d", "$/t" (short for "USD/t"), "10^24 kg".
-- Unit can be overridden in any cell by direct specification (e.g., "10 g" is 10 grams regardless of column unit).
+- Unit can be overridden in any cell by direct specification (e.g., "10 g" is 10 grams regardless of column or table unit).
 - Write large numbers (>=1e6) and small numbers (<0.001) using "e" exponent notation (e.g., 5.97e24).
 - Prefer 3 significant digits, but use fewer or more when warranted by actual precision.
 - Prefer tonne (t) for large masses and tonne per hour (t/h) for large mass rates. Otherwise, use SI units as commonly used for the measured property (e.g., g/cm^3 for density, km for large distances).
