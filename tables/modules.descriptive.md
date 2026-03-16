@@ -69,10 +69,9 @@ Notes:
 ## Conversions/Synthesis
 
 - **Electrolysis Plants** — Electrochemical facilities for splitting water into hydrogen and oxygen or reducing carbon dioxide to carbon monoxide and oxygen. PEM, alkaline, and solid-oxide cell types. Fundamental ISRU installations throughout the solar system.
+- **Catalytic Reactor Plants** — Catalytic reactor facilities for gas-phase chemical conversions including Sabatier methanation, methane reforming, water-gas shift, methanol synthesis from carbon monoxide or carbon dioxide, Fischer–Tropsch hydrocarbon synthesis, and high-pressure Haber–Bosch catalytic synthesis of ammonia from hydrogen and nitrogen.
 - **Gasification Plants** — Thermal gasification facilities converting coal, biomass, and other solid carbonaceous feedstocks to synthesis gas under controlled oxygen and steam injection.
-- **Pyrolysis Facilities** — Thermal decomposition facilities operating under oxygen-excluded or oxygen-limited conditions. Produce coke, biochar, solid carbon, and co-product gases and liquids from coal, biomass, or methane.
-- **Synthesis Plants** — Catalytic reactor facilities for gas-phase chemical conversions including Sabatier methanation, methane reforming, water-gas shift, Fischer–Tropsch hydrocarbon synthesis, and methanol synthesis from carbon monoxide or carbon dioxide.
-- **Ammonia Plants** — High-pressure Haber–Bosch catalytic synthesis facilities producing ammonia from hydrogen and nitrogen. Foundational for fertilizer and industrial chemical supply chains.
+- **Pyrolysis Plants** — Thermal decomposition facilities operating under oxygen-excluded or oxygen-limited conditions. Produce coke, biochar, solid carbon, and co-product gases and liquids from coal, biomass, or methane.
 - **Polymer Plants** — Polymerization reactor facilities producing thermoplastics, thermosets, elastomers, and synthetic fibers from petrochemical, Fischer–Tropsch, or methanol-to-olefins feedstocks.
 - **Chemical Plants** — Large-scale process facilities for commodity chemical production including chlor-alkali electrolysis, sulfuric acid contact process, nitric acid oxidation, phosphoric acid digestion, and downstream inorganic intermediates.
 - **Fine Chemicals Plants** — Controlled-environment process facilities for specialty chemicals, catalysts, coatings, adhesives, electronic-grade reagents, and pharmaceutical intermediates requiring high-purity inputs and precise reaction control.

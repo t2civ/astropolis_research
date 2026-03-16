@@ -28,6 +28,8 @@ Standard abbreviations:
 - RECYCLING -> RECYC
 - MANUFACTURING -> MANUF
 - FABRICATION -> FAB
+- OPERATIONS -> OPS
+- EQUIPMENT -> EQUIP
 - ENVIRONMENT -> ENV
 - ATMOSPHERE -> ATMOS
 
@@ -42,7 +44,7 @@ Types are specified per field (DB-style) or per table (Entity x Entity):
   - VECTORx types expect comma-delimited float values in cells
   - COLOR can have various forms
   - VARIANT can have various forms
-- TABLE: reference to another table entity (the table may not be present in this repository)
+- TABLE_ROW: reference to another table entity (the table may not be present in this repository)
 - <internal enum>: if type is not described here it might be an internal enum.
 - ARRAY[<type>]: array of a type (e.g., ARRAY[STRING], ARRAY[FLOAT]). Cell values are semicolon-delimited array items.
 
@@ -89,3 +91,4 @@ Types are specified per field (DB-style) or per table (Entity x Entity):
 
 1. For columns without instructions (not described in prompt or schema), leave empty when creating new items or copy existing values when modifying.
 2. When adding to or modifying an existing table, follow patterns and conventions already used in the table.
+3. **Column count consistency:** Every row in a TSV table must have the same number of tab-separated columns as the header row. When editing a row, always preserve trailing tabs for empty columns. The Edit tool strips trailing whitespace, so after editing TSV rows, verify column counts with `awk -F'\t' '{if(NF<EXPECTED) print NR": "NF" cols"}' <file>` and fix any short rows by appending the missing tabs via `sed`.
