@@ -23,6 +23,7 @@ The table default value is "0,0,0,0". Hence, zero-abundance cells can be left em
 ## Notes
 
 1. Consider extractable_resources.md notes 1 and 2. It's important to note that relative_abundance here reflects total mass, not extractable mass; the latter is accounted for by dispersion and other factors. Some real-world composition substances may be borderline between stone, regolith, and other resource categories; in these cases, assign to the closest category by extraction context.
-2. Keep significant digits of each value <= 2 with the following exceptions:
+2. Cross-check: Always verify relative_abundance values against the stratum's total mass from strata.tsv. Multiply `relative_abundance / 100 * mass` to obtain the implied absolute mass in kg, then compare against known real-world estimates. Strata masses can be very large, so volatiles and biosphere resources will typically have very small relative_abundance values.
+3. Keep significant digits of each value <= 2 with the following exceptions:
   - "Filler" resources (stone, regolith, and sometimes water) can have 3 significant digits to help normalize the total abundance to ~100.
   - Relatively homogeneous strata (atmospheres and oceans) can have any number of significant digits when abundance of a non-abstract resource (e.g., OXYGEN) is more precisely known.
