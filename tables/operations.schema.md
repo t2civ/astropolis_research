@@ -1,14 +1,6 @@
-# Schema for operations.tsv
+# Operations (Schema)
 
-Operations are the activity of modules. All operations generate or consume electricity, and most convert and/or extract resources. Operations are described in descriptions/"operations (physical subset).md".
-
-
-## Entity Descriptions 
-
-For any complex tasks involving table rows, it's important to understand what the row entities are supposed to represent. Read files in the `descriptions` directory as needed:
-
-- extractable_resources.md — This file describes extractable resources only. It's sufficient when working only on this subset.
-- physical_resources.md — This file describes all physical resources (including the extractable subset above) excluding service resources (i.e., intangibles).
+Operations are described in `operations.descriptive.md`.
 
 
 ## Fields

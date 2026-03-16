@@ -12,7 +12,7 @@ All simulation data is imported via tab-delimited tables in .tsv files. Tables a
 
 **Important:** Before creating or modifying any table, always read the relevant `*.schema.md` file alongside the table for table-specific field definitions, notes, and constraints.
 
-Full format documentation is in the I, Voyager Tables plugin README, found locally in Godot projects at `addons/ivoyager_tables` or at https://github.com/ivoyager/ivoyager_tables.
+Full format documentation is in the I, Voyager Tables plugin README, found locally in `../planetarium/addons/ivoyager_tables` or at https://github.com/ivoyager/ivoyager_tables.
 
 
 ## Entity Naming

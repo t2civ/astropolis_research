@@ -1,4 +1,6 @@
-# Physical Operations
+# Operations (Descriptive)
+
+Operations are the activity of modules. Operations generate or consume electricity, and most extract, convert, or consume resources.
 
 Notes:
 
@@ -142,8 +144,8 @@ Notes:
 
 - **Open Agriculture** — Conventional cultivation of crops and raising of livestock on open land under ambient atmospheric conditions. Produces plant-based foods, animal-based foods, fiber crops, and biomass feedstock. Applicable on Earth and in any sufficiently terraformed open environment, including O'Neill cylinder interiors.
 - **Open Aquaculture** — Marine and freshwater farming of fish, shellfish, seaweed, and microalgae in open water bodies.
-- **Commercial Fishing** — Wild-capture marine and freshwater harvest of fish, shellfish, and other aquatic organisms. Produces animal products for food processing and direct consumption. Distinct from aquaculture (farmed production). Primarily Earth-based.
-- **Open Forestry** — Managed cultivation and harvest of trees for timber, pulp, and biomass in open conditions.
+- **Commercial Fishing** — Wild-capture marine and freshwater harvest of fish, shellfish, and other aquatic organisms. Produces animal products for food processing and direct consumption. Distinct from aquaculture (farmed production). (Simulation note: this is an extraction operation.)
+- **Open Forestry** — Managed cultivation and harvest of trees for timber, pulp, and biomass in open conditions. (Simulation note: this is an extraction operation.)
 - **Artisanal Farming** — Small-scale family-farm and handcraft food production: artisan cheeses, charcuterie, preserves, craft beverages, baked goods, and other specialty food products. Represents culturally significant, high-value-per-mass food production distinct from industrial agriculture and food processing.
 - **Artisanal Crafting** — Small-scale handcraft production of non-food goods: pottery, handmade textiles, woodcraft, leatherwork, artisanal soap, candles, and decorative items. Represents culturally significant, high-value-per-mass goods production distinct from industrial manufacturing.
 - **Controlled-Environment Agriculture** — Sealed, controlled-environment crop cultivation and animal husbandry in pressurized greenhouses, space station grow modules, or planetary surface habitats. Requires artificial or filtered lighting, active atmosphere management (CO₂ supply, humidity control), water recycling, and nutrient delivery. Co-produces oxygen via photosynthesis.
