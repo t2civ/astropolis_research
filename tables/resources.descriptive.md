@@ -1,18 +1,18 @@
-# Physical Resources
+# Resources (Descriptive)
+
+Resources are physical and intangible abstractions that are extracted, converted, consumed, stored, transported, and/or traded in the simulation.
 
 Notes:
 
-1. Elemental compositions are for reference only. Industrial inputs should be considered as highly fungible when resource input or composition isn't explicit. E.g., "concrete" is broadly defined and almost always produced from local bulk extraction products.
-2. "Extractable" means that the resource exists in natural bodies at least somewhere and may be a target of extraction (excluding biological targets), possibly in addition to other sourcing. Resources not marked as extractable must be sourced from refining, manufacturing, agriculture, aquaculture, forestry, etc.
-3. Deuterium (D₂) is treated as a downstream refined product of water or hydrogen, not as a separate extractable resource. In contrast, Helium-3 (³He) is a separate "extractable" resource. The different treatment is due to Helium-3's much higher fractional variation (relative to the bulk isotope) among different natural strata.
-4. Some resources are abstractions for both the extracted and refined product at the same time, e.g., Sulfur, Industrial Minerals, Stone, and most volatiles. Others have separate extracted and refined variants.
-5. Manufactured/fabricated resources are considered to include their component resources. E.g., Composite Structures includes Polymers, Composites, Technical Textiles, etc.; Robotics includes Steel, Aluminium, Industrial Metals, Electronics, etc.; Packaged Meals includes Crop Products, Animal Products, Polymers, Aluminium, etc. Extractable resources are treated as exclusive masses in natural body composition (but may be part of the composition of downstream products).
-6. Physical resources including catchall categories are abstracted as singular commodities with a common price by weight. Exceptions: Electricity is priced by MWh; Infrastructure and Heavy Rockets/Transports are handled outside the commodity trade system.
+1. Listed elemental compositions are weight percent (summing to 100) followed by valuable co- or by-products in ppm (mainly for the extractable subset).
+2. **Important:** For compositionally complex or abstract category resources, elemental compositions are for reference only. Individual cases differ from these references. Examples: different strata necessarily have different Industrial Minerals; different construction locations produce and use compositionally different Concrete; different technologies result in chemically different Batteries; etc. The simulation simplifies by treating composition within an abstract resource as fungible.
+3. Natural strata are composed entirely by weight of "extractable" resources. In this context, Stone and Regolith are the main fillers for solid rocky strata. Ores represent total concentrated mass (usually much greater than what could be extracted economically) and volatiles represent what might be separated from solids in the extraction operation. Distribution of each resource within a stratum is modeled by abundance and dispersion (each having epistemic uncertainty error), where high dispersion is the most important factor for economical extraction in heterogeneous strata (e.g., for mining or drilling).
+4. Most resources are traded as commodities. Many are inputs to downstream industrial processes or economic activities. A few are final products that are "absorbed" into the simulation's infrastructure or population mechanics.
 
 
 ## Energy
 
-*Electricity, primary inputs to power generation and/or propulsion systems (excluding oxygen and non-energetic propellants), and spent nuclear fuel assemblies.*
+*Electricity, primary inputs to power and/or propulsion systems (excluding oxygen and non-energetic propellants), and spent nuclear fuel assemblies.*
 
 - **Electricity** — Locally generated, stored, or transmitted electrical energy; the common output of all power-generation operations and primary energy input for industrial, residential, and life-support activities. (Special handling in the simulation; don't list as input or output resource.)
 - **Hydrogen** — H₂. H 100. Extractable.
@@ -26,8 +26,8 @@ Notes:
 - **LE Uranium Fuel** — Assembled LWR fuel; UO₂ pellets enriched to 4.5% ²³⁵U (95.5% ²³⁸U) in Zircaloy-4 cladding with Inconel/SS structural components; ref. Westinghouse 17×17 PWR fuel assembly (~660 kg, 80/17.5/2.5 UO₂/Zircaloy/SS by mass). U 70.5 (isotopic: 4.5% U-235, 95.5% U-238), Zr 17.2, O 9.5, Fe 1.6, Cr 0.45, Sn 0.26, Ni 0.25, other 0.24.
 - **HE Uranium Fuel** — Naval reactor fuel element (representative); HEU-Zr alloy fuel meat in Zircaloy cladding with SS structural grid; ref. estimated A4W/S6G-type plate fuel geometry. U 25 (isotopic: 93% U-235, 7% U-238), Zr 54, Fe 13.5, Cr 3.5, Ni 2, Sn 0.8, other (Mo, Mn, Si) 1.2.
 - **Thorium Fuel** — Mixed-oxide fuel assembly (speculative); (Th,²³³U)O₂ pellets with ~3.5% ²³³U seed in Zircaloy-4 cladding; ref. Indian AHWR-type fuel bundle (80/17.5/2.5 fuel/Zircaloy/SS by mass). Th 67.8, Zr 17.2, O 9.8, U 2.5 (isotopic: 100% U-233), Fe 1.7, Cr 0.45, Sn 0.26, Ni 0.25, other 0.04.
-- **Deuterium** — ²H₂ (D₂). Separable from hydrogen or water in refining processes (see note 5). H 100.
-- **Helium-3** — ³He extracted as a trace component of He from natural gas (Earth), solar-wind-implanted regolith (Moon, asteroids), or gas giant atmospheres. ³He/⁴He by number: protosolar, ~1.66 × 10⁻⁴; lunar regolith (solar wind), ~4.6 × 10⁻⁴; Earth atmospheric, 1.384 × 10⁻⁶; Earth crustal, ~0.01–0.1 of Earth atmospheric. He 100. Extractable.
+- **Deuterium** — ²H₂ (D₂). Separable from hydrogen or water in refining processes. H 100.
+- **Helium-3** — ³He extracted as a trace component of He from natural gas (Earth), solar-wind-implanted regolith (Moon, asteroids), or gas giant atmospheres. ³He/⁴He by number: protosolar, ~1.66 × 10⁻⁴; lunar regolith (solar wind), ~4.6 × 10⁻⁴; Earth atmospheric, 1.384 × 10⁻⁶; Earth crustal, ~0.01–0.1 of Earth atmospheric. He 100. Extractable. (Simulation note: Helium-3 is extractable, unlike Deuterium, because it has a much higher fractional variation relative to its bulk isotope.)
 - **Spent Uranium Fuel** — Irradiated LWR and naval reactor fuel assemblies after discharge; ref. PWR spent fuel at ~50 GWd/tHM burnup, cooled ≥5 years, in original Zircaloy cladding. Approximately 96% of initial uranium remains and is recoverable via reprocessing. U 65.9 (isotopic: ~0.8% U-235, ~0.5% U-236, ~98.7% U-238), Zr 17.2, O 9.5, FP 3.6, Fe 1.6, Pu 0.85, Cr 0.45, Sn 0.26, Ni 0.25, minor actinides (Np, Am, Cm) 0.15, other 0.24.
 - **Spent Thorium Fuel** — Irradiated thorium-cycle fuel assemblies after discharge; ref. AHWR-type fuel at ~40 GWd/tHM burnup, in original Zircaloy cladding. Contains bred ²³³U recoverable via reprocessing; ²³²U trace contamination drives hard-gamma dose requiring remote handling. Th 65.5, Zr 17.2, O 9.8, FP 2.5, U 2.2 (primarily ²³³U), Fe 1.7, Cr 0.45, Sn 0.26, Ni 0.25, Pa 0.1, other 0.04.
 
@@ -76,10 +76,11 @@ Notes:
 - **Iron** — Industrial pig iron; ref. blast-furnace pig iron, global production-weighted. Fe 93.5, C 4, Si 1, Mn 0.7, P 0.15, S 0.05, other (Cr, Ti, V, Cu) 0.6.
 - **Steel** — Carbon steel, alloy steel, stainless steel; ref. production-weighted global blend (~85% carbon, ~10% alloy, ~5% stainless). Fe 96.5, Cr 1, Mn 0.8, Ni 0.5, Si 0.3, C 0.3, Mo 0.1, other (V, W, Cu, N, S, P) 0.5.
 - **Aluminium** — Refined Al metal and alloys; ref. production-weighted blend of wrought (1xxx, 3xxx, 5xxx, 6xxx, 7xxx) and cast alloys. Al 97, Si 1, Cu 0.5, Mg 0.4, Fe 0.4, other (Mn, Zn, Cr, Ti, Ni) 0.7.
-- **Industrial Metals** — Cu, Ti, Zn, Ni, Sn, Pb, W, Mo, Co, Mn, Cr, etc.; also includes Ag. Ref. production-weighted basket of refined industrial metals (metal content basis). Cu 29, Mn 23, Zn 16, Cr 13.5, Pb 13.5, Ni 3.75, Sn 0.4, Mo 0.35, Ti 0.3, Co 0.24, W 0.1, Ag 0.03, other 0.03.
+- **Industrial Metals** — Cu, Ti, Zn, Ni, Sn, Pb, W, Mo, Co, Mn, Cr, etc.; also includes Ag. Ref. production-weighted basket of refined industrial metals (metal content basis). Cu 29, Mn 23, Zn 16, Cr 13.5, Pb 13.5, Ni 3.75, Sn 0.4, Mo 0.35, Ti 0.3, Co 0.24, W 0.1, Ag 0.03, other 0.03. (Simulation note: Ag is treated as an industrial rather than precious metal to be less distortional on commodity pricing.)
 - **Precious Metals** — Au, Pt, Pd, Rh, Ru, Ir, Os (excludes Ag). Ref. production-weighted basket of refined precious metals. Au 87.5, Pd 5.5, Pt 5, Ru 0.9, Rh 0.8, Ir 0.2, Os 0.03, other 0.07.
 - **Rare Earths** — REE oxides, metals, alloys, permanent-magnet stock; ref. production-weighted blend of separated REE oxides (~50%), NdFeB magnet stock (~30%), RE metals/alloys (~10%), and other RE compounds (~10%). Total REE 67 (Ce 18, Nd 16, La 12, Pr 6, Y 5, Dy 2.5, Sm 2, Tb 1, Gd 1, other REE 3.5), Fe 18, O 8.5, B 0.3, Co 0.6, other (Cu, Al, Ni, Mg, F, Cl, Si) 5.6.
 - **Uranium** — Purified, unenriched uranium hexafluoride (UF₆) at natural isotopic assay (0.711% ²³⁵U); ref. conversion-plant product meeting ASTM C787 specification. U 67.6 (isotopic: 0.711% U-235, 99.289% U-238), F 32.4.
+- **Depleted Uranium** — Depleted uranium hexafluoride (UF₆) tails from isotope enrichment, containing ~0.25% ²³⁵U (balance ²³⁸U). U 67.6 (isotopic: ~0.25% U-235, ~99.75% U-238), F 32.4. Primary by-product of LEU and HEU fuel manufacturing. Uses include re-enrichment feedstock, fast-breeder reactor blanket material, radiation shielding, and high-density counterweights.
 - **Thorium** — Nuclear-grade thorium dioxide (ThO₂) powder; ref. purified thoria separated from monazite-process residues, meeting nuclear-purity specifications. Th 87.9, O 12.1.
 - **Carbon** — Solid carbon: metallurgical coke, carbon black, biochar, graphite, activated carbon, and pyrolysis carbon; ref. forward-weighted blend of metallurgical coke (~50%), carbon black (~20%), and pyrolysis/graphite/activated carbon (~30%). C 95, S 0.6, O 1, Si 0.7, H 0.4, Fe 0.4, Al 0.4, Ca 0.3, N 0.3, Mg 0.15, other (K, Na, Ti, Mn, P) 0.75.
 - **Concrete** — Portland cement, geopolymer, sintered-regolith binder; ref. ready-mix concrete with blended siliceous/calcareous aggregate. O 49.5, Si 20, Ca 17, C 3, Al 2, Fe 1.5, Mg 1.5, H 1, Na 0.5, K 0.5, S 0.3, other (Ti, Mn, Cl) 2.7.
@@ -126,7 +127,7 @@ Notes:
 - **Artisanal Foods** — Handcraft and family-farm food products; artisan cheeses, charcuterie, preserves, craft beverages, baked goods; ref. estimated blend. O 60, C 22, H 8, N 2, other (Na, K, Ca, P, S, Cl, Mg, Fe) 8.
 - **Artisanal Goods** — Handcraft non-food items; pottery, handmade textiles, woodcraft, leatherwork, artisanal soap, candles; ref. estimated blend. C 30, O 35, Si 8, H 5, Fe 4, Ca 4, Al 2, Na 1.5, N 1, other (K, Mg, S, Cl, Ti) 9.5.
 - **Biofibers** — Cotton, hemp, jute, wool, silk, etc.; ref. production-weighted blend dominated by cotton (~75%). C 44, O 47, H 6, N 1, S 0.2, other (K, Ca, Mg, Na, Si, Fe, P) 1.8.
-- **Lumber/Wood Products** — Timber, engineered wood products, wood pulp, paper; ref. production-weighted blend of sawn timber, engineered wood, and pulp/paper at typical trading moisture. C 44, O 44, H 6, other (N, Ca, K, Mg, Na, Si, S) 6.
+- **Lumber/Wood Products** — Sawn timber, engineered wood products, wood pulp, paper; ref. production-weighted blend of sawn timber, engineered wood, and pulp/paper at typical trading moisture. C 44, O 44, H 6, other (N, Ca, K, Mg, Na, Si, S) 6.
 - **Algal/Microbial Products** — Ref. production-weighted blend of microalgal biomass (Spirulina, Chlorella), bacterial fermentation products (amino acids, organic acids), and yeast extracts; dried/concentrated. C 48, O 28, N 8, H 7, S 1, P 1, other (K, Ca, Mg, Na, Fe) 7.
 - **Biofeedstock** — Raw plant/microbial mass used as industrial feedstock; ref. woody and herbaceous biomass, air-dried. C 47, O 42, H 6, other (N, K, Ca, Si, Mg, Na, Fe, S, P, Cl) 5.
 - **Biochemicals** — Industrial enzymes, amino acids, biopolymers, fermentation products (excluding ethanol and methanol); ref. production-weighted blend of PLA/PHB biopolymers, citric/lactic acid, amino acids, and industrial enzymes. C 42, O 30, N 8, H 6.5, Na 2, S 1.5, P 1.5, K 1, Cl 1, Ca 0.5, other (Mg, Fe, Zn, Cu) 6.
@@ -134,3 +135,30 @@ Notes:
 - **Fertilizers** — NPK compounds, micronutrient mixes, soil amendments; ref. production-weighted blend of urea (~35%), DAP/MAP (~15%), potash KCl (~15%), ammonium nitrate (~15%), superphosphates (~5%), and other amendments (~15%). O 33, N 25.5, K 8, Cl 7, C 7, P 5.5, H 4.5, Ca 2, S 1, other (Mg, Na, Fe, Mn, Zn, B, Cu) 6.5.
 - **Soil/Growth Media** — Terrestrial soil, compost, hydroponic substrates, amended regolith; ref. enriched loamy topsoil with organic matter and amendments. O 47.5, Si 21.5, Al 6, C 6, Fe 3.5, Ca 3, H 2.5, Mg 2, K 2, Na 0.8, Ti 0.7, N 0.4, other (Mn, P, S, Cl) 4.1.
 - **Biowaste** — Organic waste, sewage sludge, food waste, human and animal metabolic waste, and crop residue; ref. blend of municipal organic waste, agricultural residue, and sewage sludge. O 48, C 30, H 7, Si 2.5, N 1.5, Ca 1.5, K 1, Fe 1, Al 0.8, P 0.5, S 0.5, Na 0.3, Mg 0.3, Cl 0.2, other (Mn, Ti, Zn) 4.4.
+- **Wild Fisheries** — Earth only; ref. production-weighted global marine and freshwater catch (whole organism, live weight). O 72, C 13, H 10.5, N 2.5, Ca 0.4, P 0.3, K 0.3, S 0.3, Na 0.2, Cl 0.15, Mg 0.03, Fe 0.01, other 0.31. Extractable. (Special handling in the simulation; converted at harvest, not a commodity resource.)
+- **Timber** — Earth only; ref. production-weighted global industrial roundwood (standing green wood, ~50% moisture). O 65.5, C 24.5, H 8.5, Ca 0.3, K 0.25, N 0.05, Mg 0.05, S 0.02, P 0.02, other 0.81. Extractable. (Special handling in the simulation; converted at harvest, not a commodity resource.)
+
+
+## Services
+
+*Intangibles.*
+
+- **Scalar Compute** — 
+- **Tensor Compute** — 
+- **Neuromorphic Compute** — 
+- **Research & Development** — 
+- **Transport Services** — 
+- **Wholesale/Logistics** — 
+- **Maintenance** — 
+- **Retail Services** — 
+- **Entertainment** — 
+- **Hospitality** — 
+- **Healthcare** — 
+- **Education** — 
+- **Consulting** — 
+- **Marketing/Advertising** — 
+- **Financial Services** — 
+- **Real Estate Services** — 
+- **Accounting Services** — 
+- **Legal Services** — 
+

@@ -1,11 +1,13 @@
 # Strata
 
+Strata correspond to different geological layers, physical features, and/or territorial or economic interest regions. In the simulation, they are present or potential extraction targets with distinct resource compositions.
+
 ## Notes
 
 1. The simulation handles all non-generic strata as exclusive masses, each with its own composition.
-2. Depths here are reference only. Strata volumes should be constructed as simplified spheres, sphere shells, or fractional sphere shells, using area-weighted radial boundaries when actual thickness varies (e.g., Earth ocean). Calculated inner and outer radii won't exactly line up for adjacent strata using these simplified geometries, but this doesn't matter in the simulation. (Ring systems are handled separately.)
+2. Depths here are reference only. Strata volumes should be constructed as simplified spheres, sphere shells, or fractional sphere shells, using area-weighted radial boundaries when actual thickness varies (e.g., Earth's ocean). Calculated inner and outer radii won't exactly line up for adjacent strata using these simplified geometries, but this doesn't matter in the simulation. (Ring systems are handled separately.)
 3. Some strata are "best guesses". This should be noted here but uncertainty is handled elsewhere in the model.
-4. Earth "continental surface" and "continental shelf" encompass land area (including glacier and surface water body footprints) and shelf area, respectively. Continental strata below these (near-surface, subsurface, etc.) encompass both land and shelf area (this should capture all offshore drilling operations). "Ocean" as a volume includes water over the continental shelf. Therefore, in area construction: total surface ≈ continental surface + continental shelf + ocean floor ≈ continental near-surface (or deeper "continental") + ocean crust; ocean = continental shelf + ocean floor; ocean ≠ ocean floor.
+4. Earth "continental surface" and "continental shelf" encompass land area (including glacier and surface water body footprints) and shelf area, respectively. Continental strata below these (near-surface, subsurface, deep subsurface, etc.) encompass both land and shelf area (these should capture all offshore drilling operations). "Ocean" as a volume includes water over the continental shelf. Therefore, in area construction: total surface ≈ continental surface + continental shelf + ocean floor ≈ continental near-surface (or deeper "continental") + ocean crust; ocean = continental shelf + ocean floor; ocean ≠ ocean floor.
 5. Each Earth "continental" stratum is further subdivided into the 8 territorial/economic interest regions listed below, except for continental ice bodies which are assigned only to Antarctica and Other. All continental surface and shelf (and continental crust layers below) should be assigned into these exclusive regions. ("Ocean" as a whole is handled as a separate non-territorial region even though shelf below is territorial.) These regions are defined as:
    * USA
    * China
@@ -17,11 +19,7 @@
    * Other (includes Greenland and remaining land and continental shelf; has "continental ice bodies" covering the part of "continental surface" that represents Greenland)
 6. Generic strata are compositional templates only. Each body in the simulation has a unique composition.
 7. Each stratum has a simplified composition defined by mean abundance and dispersion (each having uncertainty error terms) for each simulation resource. Large dispersion is the principal factor enabling economical extraction in mining/drilling operations.
-8. For data table construction, convert text to CONSTANT_CASE (capitalize, omit parentheses, and replace non-alphanumeric characters with underscores) to generate the following fields:
-   * body — Body type (e.g., PLANET, MOON, ASTEROID) followed by body name (usually the section name; for Small/Undifferentiated Bodies section, extract body name from the item name; or none for generic). Examples: PLANET_EARTH, MOON_MOON, PLANET_MARS, MOON_PHOBOS.
-   * territory — Usually blank. For Earth "continental" strata, it is the regional subdivision defined in note 5 (abbreviate "EU+" as "EU").
-   * stratum_group — Item name without body or territory prefix. Abbreviate CONTINENTAL as CONT. In the case of Small/Undifferentiated Bodies and Generic, it is simply "BULK".
-   * name — Concatenate above three (as applicable) using underscores. E.g., PLANET_EARTH_ATMOSPHERE, PLANET_EARTH_USA_CONT_SURFACE, MOON_MOON_REGOLITH, MOON_PHOBOS_BULK, etc. This is a unique identifier for each stratum.
+
 
 ---
 
