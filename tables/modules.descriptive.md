@@ -102,6 +102,8 @@ Notes:
 
 ## Biological
 
+- **Crew Systems** — Integrated environmental control and life support hardware for crewed spacecraft, stations, and surface habitats, including atmosphere processors, water recovery units, thermal control systems, fire suppression, and radiation protection.
+- **Cities & Towns** — Built environment of human settlements encompassing residential, commercial, transportation, utility, and public-service infrastructure from small outposts to major metropolitan areas.
 - **Industrial Farms** — Large-scale mechanized farms for conventional crop cultivation and livestock raising on open land under ambient atmospheric conditions.
 - **Controlled-Environment Farms** — Sealed pressurized greenhouses or habitat grow modules for crop cultivation and animal husbandry with artificial or filtered lighting, active atmosphere management, water recycling, and nutrient delivery.
 - **Artisanal Farms** — Small-scale family farms for artisanal and specialty food production including cheeses, preserves, craft beverages, and baked goods.
