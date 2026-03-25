@@ -1,14 +1,6 @@
 # Schema for strata_resources.tsv
 
-This Entity x Entity table defines resource abundance and distribution in each strata. 
-
-
-## Entity Descriptions 
-
-For complex tasks involving strata and their resource compositions, it's important to understand what these simulation entities are supposed to represent. Read these files in the `descriptions` directory:
-
-- strata.md — This file describes strata (rows).
-- extractable_resources.md — This file describes extractable resources (columns). Only these resources need to be considered when working with strata composition.
+This Entity x Entity table defines resource abundance and distribution in each strata. Resources are described in `resources.descriptive.md` (only the extractable subset is relevant here). Strata are described in `strata.descriptive.md`.
 
 
 ## Table Data
@@ -46,4 +38,6 @@ effective_dispersion = dispersion + (0.25 * (survey_level - 4.0))
 discovered = (relative_abundance / 100.0) * (10 ^ effective_dispersion) 
 discovered = min(1.0, discovered)
 ```
+
+TODO: Fix above so effective_dispersion is a multiplier adjustment (so that dispersion = 0 can't have effective dispersion).
  

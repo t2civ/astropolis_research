@@ -1,11 +1,6 @@
 # Schema for strata.tsv
 
-Strata are volumes of natural or artificial bodies that have defined resource composition, or are templates for resource composition in the case of generic strata. Most strata have the simplified geometry of a sphere or sphere shell, or a fraction thereof (where spherical fraction is defined but not area boundaries).
-
-
-## Entity Descriptions 
-
-For any complex tasks involving strata, it's important to understand what strata are supposed to represent. Read descriptive information in `descriptions/strata.md`.
+Strata are volumes of natural or artificial bodies that have defined resource composition, or are templates for resource composition in the case of generic strata. Most strata have the simplified geometry of a sphere or sphere shell, or a fraction thereof (where spherical fraction is defined but not area boundaries). Strata are described in `strata.descriptive.md`.
 
 
 ## Fields
