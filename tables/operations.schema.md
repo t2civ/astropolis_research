@@ -19,7 +19,7 @@ Operations are described in `operations.descriptive.md`.
 These fields are used only if `process_group` is `EXTRACTION`.
 
 - stratum_group — Target stratum_group. See `stratum_group` in strata.tsv.
-- target_deposits — List of resources that the operation specifically targets as deposits.
+- target_deposits — List of resources that the operation specifically targets as deposits. If this field is blank, then the operation extracts all volatile resources present.
 - target_rate — Expected extraction rate of target deposit resource(s) in t/h per 1 MW power input at optimal deposit level (see note 1). Sum of all target deposit resources for operations with multiple targets.
 - overburden — Mass rate of overburden generated. For mining and drilling operations, this is typically STONE and REGOLITH removed from the target stratum and converted to REGOLITH at the extraction site.
 - discovered_norm — Normalizing `discovered` level (0 < value ≤ 1.0) for which `target_rate`, `electricity`, and `overburden` are defined. Corresponds to optimal resource deposit conditions per note 1. For operations with multiple target deposits, this is the sum of individual `discovered` values. The `discovered` value for each resource in each stratum is calculated per the formula in strata_resources.schema.md (Practical Effect of Dispersion). Actual `target_rate` scales linearly: if the actual `discovered` in a stratum is half `discovered_norm`, the effective `target_rate` is half the table value at the same electricity and throughput. Note: `discovered_norm` may exceed the formula-computed maximum for a stratum_group to ensure that per-discovered-unit productivity (`target_rate / discovered_norm`) decreases monotonically with depth.
