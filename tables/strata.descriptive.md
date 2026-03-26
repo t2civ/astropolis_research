@@ -8,15 +8,7 @@ Strata correspond to different geological layers, physical features, and/or terr
 2. Depths here are reference only. Strata volumes should be constructed as simplified spheres, sphere shells, or fractional sphere shells, using area-weighted radial boundaries when actual thickness varies (e.g., Earth's ocean). Calculated inner and outer radii won't exactly line up for adjacent strata using these simplified geometries, but this doesn't matter in the simulation. (Ring systems are handled separately.)
 3. Some strata are "best guesses". This should be noted here but uncertainty is handled elsewhere in the model.
 4. Earth "continental surface" and "continental shelf" encompass land area (including glacier and surface water body footprints) and shelf area, respectively. Continental strata below these (near-surface, subsurface, deep subsurface, etc.) encompass both land and shelf area (these should capture all offshore drilling operations). "Ocean" as a volume includes water over the continental shelf. Therefore, in area construction: total surface ≈ continental surface + continental shelf + ocean floor ≈ continental near-surface (or deeper "continental") + ocean crust; ocean = continental shelf + ocean floor; ocean ≠ ocean floor.
-5. Each Earth "continental" stratum is further subdivided into the 8 territorial/economic interest regions listed below, except for continental ice bodies which are assigned only to Antarctica and Other. All continental surface and shelf (and continental crust layers below) should be assigned into these exclusive regions. ("Ocean" as a whole is handled as a separate non-territorial region even though shelf below is territorial.) These regions are defined as:
-   * USA
-   * China
-   * EU+ (includes EEA nations, UK, Switzerland, & associated microstates)
-   * Russia
-   * India
-   * Japan
-   * Antarctica (has "continental ice bodies" covering most of "continental surface")
-   * Other (includes Greenland and remaining land and continental shelf; has "continental ice bodies" covering the part of "continental surface" that represents Greenland)
+5. Earth continental strata are further subdivided into 7 "territorial" regions (corresponding to national polities in `players.tsv`) and 1 "commons" region (Antarctica). All continental surface and shelf (and continental crust layers below) is assigned into one of these 8 exclusive regions. Atmosphere, ocean (as a whole), ocean floor, ocean crust, mantle, and core are commons.
 6. Generic strata are compositional templates only. Each body in the simulation has a unique composition.
 7. Each stratum has a simplified composition defined by mean abundance and dispersion (each having uncertainty error terms) for each simulation resource. Large dispersion is the principal factor enabling economical extraction in mining/drilling operations.
 
