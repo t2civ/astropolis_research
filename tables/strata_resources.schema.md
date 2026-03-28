@@ -17,7 +17,7 @@ The table default value is "0,0,0,0". Hence, zero-abundance cells can be left em
 
 ## Notes
 
-1. Consider `resources.descriptive.md` notes 2 and 3 when setting `relative_abundance`. It's important to note that `relative_abundance` here reflects total mass, not extractable mass; the latter is accounted for by dispersion and other factors. Some real-world composition substances may be borderline between stone, regolith, and other resource categories; in these cases, assign to the closest category by extraction context.
+1. Consider `resources.descriptive.md` notes 2 and 3 when setting `relative_abundance`. IMPORTANT: `relative_abundance` here reflects total mass, not extractable mass (the latter is accounted for by dispersion and other factors). Some real-world composition substances may be borderline between stone, regolith, industrial minerals, or other resource categories; in these cases, assign to the closest resource category by extraction context.
 2. `dispersion` should be set with strong consideration of its practical effect on extraction operations such as mining (see Practical Effect of Dispersion below).
 3. Cross-check: Always verify relative_abundance values against the stratum's total mass from strata.tsv. Multiply `relative_abundance / 100 * mass` to obtain the implied absolute mass in kg, then compare against known real-world estimates. Strata masses can be very large, so volatiles and biosphere resources will typically have very small relative_abundance values.
 4. Prefer 1 or 2 significant digits. Use 3 for "filler" resources (usually stone and regolith) to help normalize the total abundance to ~100. Use more when mean abundance of a resource is precisely known (e.g., atmospheric components).

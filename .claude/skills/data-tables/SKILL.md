@@ -59,10 +59,10 @@ Types are specified per field (DB-style) or per table (Entity x Entity):
 - Follow existing patterns in tables that already exist.
 
 
-## Skipping Rows and Columns
+## Non-Imported Rows and Columns
 
-- Rows starting with # are skipped by the importer.
-- Columns where the 1st row item starts with # are skipped.
+- Rows starting with # are not imported.
+- Columns where the 1st row item starts with # are not imported.
 
 
 ## DB-Style Table Format
@@ -91,4 +91,4 @@ Types are specified per field (DB-style) or per table (Entity x Entity):
 
 1. For columns without instructions (not described in prompt or schema), leave empty when creating new items or copy existing values when modifying.
 2. When adding to or modifying an existing table, follow patterns and conventions already used in the table.
-3. **Column count consistency:** Every row in a TSV table must have the same number of tab-separated columns as the header row. When editing a row, always preserve trailing tabs for empty columns. The Edit tool strips trailing whitespace, so after editing TSV rows, verify column counts with `awk -F'\t' '{if(NF<EXPECTED) print NR": "NF" cols"}' <file>` and fix any short rows by appending the missing tabs via `sed`.
+3. Verify that data are added in the correct table columns. (Misaligned columns are a common mistake in tables with many empty cells.)
