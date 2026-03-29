@@ -6,7 +6,7 @@ Notes:
 
 1. Modules can have a many-to-many relationship with operations. Each module provides capacity for one or more operations. Each operation is enabled by one or more modules. (In practice, many specific cases are one-to-one.)
 2. Although described here in terms of individual units, modules are implemented as a continuous "capacity" value.
-3. A module's capacity can be shifted ("converted") among its enabled operations. E.g., Combustion Power Plants (which really represents a capacity of combustion plants) could be shifted from 70% Coal Power / 30% Methane Power to 40/60 over time. Speed and cost of conversion are fixed properties of each module. This could represent anything from a major refitting/retooling/relocation to a minor operational adjustment, depending on the module.
+3. A module's capacity can be shifted ("reconfigured") among its enabled operations. E.g., Combustion Power Plants (which really represents a capacity of combustion plants) could be shifted from 70% Coal Power / 30% Methane Power to 40/60 over time. Speed and cost of reconfiguration are fixed properties of each module. This could represent anything from a major refitting/retooling/relocation to a minor operational adjustment, depending on the module.
 
 
 ## Energy

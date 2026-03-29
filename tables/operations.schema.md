@@ -33,7 +33,7 @@ These fields are used only if `process_group` is `CONVERSION`.
 - input_rates — A semicolon-delimited list of input resource rates (in t/h) for the operation.
 - output_resources — A semicolon-delimited list of output resources for the operation.
 - output_rates — A semicolon-delimited list of output resource rates (in t/h) for the operation.
-- mass_flow — Equals the sum of input_rates equals the sum of output_rates, within rounding precision.
+- mass_flow — Equals the sum of input_rates equals the sum of output_rates, within rounding precision. Note: the column header in `operations.tsv` is currently `mass_conversion`; the name discrepancy will be resolved in a future update.
 - fuel_rate — Energy group operations only. Total input rate excluding OXYGEN.
 
 

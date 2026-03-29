@@ -11,3 +11,5 @@ The data type is ARRAY[FLOAT]; each cell contains float values delimited by semi
 ## Notes
 
 1. Capacity should usually be "nameplate capacity". For solar power, use peak capacity assuming direct sunlight in space at 1 AU (this will be more consistent with off-Earth usage).
+2. The unit of capacity follows from the operation's normalization in `operations.tsv`. For Energy group modules, one unit of capacity corresponds to 1 MW of electricity output. For other modules, see `operations.schema.md` for the applicable normalization.
+3. An empty cell means the module is not present at the facility (zero capacity for all of its operations).
