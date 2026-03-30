@@ -91,4 +91,4 @@ Types are specified per field (DB-style) or per table (Entity x Entity):
 
 1. For columns without instructions (not described in prompt or schema), leave empty when creating new items or copy existing values when modifying.
 2. When adding to or modifying an existing table, follow patterns and conventions already used in the table.
-3. Verify that non-empty data are added in the correct table columns (misaligned columns are a common mistake in tables with many empty cells). It is not necessary to add trailing tabs for rows that have empty cells on the right-hand side.
+3. Verify that non-empty data are added in the correct table columns. **Misaligned columns are a common mistake in tables with internal empty cells.** Verify that data rows have number of tab delimiters equal to or less than the header row; fewer is OK if there are empty data cells on the right-hand side.
