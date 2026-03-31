@@ -11,15 +11,13 @@ Notes:
 
 ## Energy
 
-- **Solar Farms** — Utility-scale photovoltaic and concentrated solar thermal installations. Primary power sources across the inner solar system. Concentrated solar thermal variants may provide facility or district heat.
-- **Solar Arrays** — Distributed and small-scale photovoltaic systems including rooftop, building-integrated, and portable deployments. Represent aggregate capacity of many individual installations.
+- **Solar Arrays** — Photovoltaic and concentrated solar thermal installations at all scales, from utility-scale solar farms to rooftop and building-integrated deployments. Primary power sources across the inner solar system. Concentrated solar thermal variants may provide facility or district heat.
 - **Geothermal Plants** — Power stations extracting heat from planetary interiors via hydrothermal wells or engineered hot-rock systems. Applicable on Earth and tidally heated bodies. May provide facility or district heat.
 - **Hydroelectric Dams** — River impoundment or run-of-river hydropower installations.
 - **Wind Farms** — Utility-scale wind turbine arrays, onshore or offshore. Applicable on Earth, Mars, Venus upper atmosphere, and Titan.
 - **Tidal Power Stations** — Tidal barrage or tidal stream turbine installations exploiting gravitational tidal forcing. Earth-only under foreseeable conditions.
 - **Combustion Power Plants** — Utility-scale thermal power stations with boilers and gas turbines for burning hydrogen, methane, methanol, ethanol, liquid hydrocarbons, oil, or coal to generate electricity. May provide facility or district heat.
-- **Utility Fuel Cells** — Centralized stationary fuel cell installations operating on hydrogen, methane, or methanol for grid-scale or large-facility power. May provide facility or district heat.
-- **Distributed Fuel Cells** — Small-scale fuel cell units for buildings, vehicles, and remote installations, operating on hydrogen, methane, or methanol. Represent aggregate capacity of many individual units. May provide facility heat.
+- **Fuel Cells** — Stationary fuel cell installations at all scales, from centralized grid-scale plants to small units for buildings, vehicles, and remote installations, operating on hydrogen, methane, or methanol. May provide facility or district heat.
 - **LEU Nuclear Plants** — Light-water or heavy-water reactor power stations operating on low-enriched uranium fuel. May provide facility or district heat.
 - **HEU Nuclear Reactors** — Compact high-enrichment uranium reactors for naval propulsion, space power, and other applications requiring high power density at small scale. May provide facility heat.
 - **Thorium Nuclear Plants** — Thermal-breeder reactor power stations operating on thorium-cycle fuel with in-situ breeding of fissile uranium-233. May provide facility or district heat.
