@@ -4,7 +4,7 @@ Modules are the physical infrastructure that implement operations.
 
 Notes:
 
-1. Modules can have a many-to-many relationship with operations. Each module provides capacity for one or more operations. Each operation is enabled by one or more modules. (In practice, many specific cases are one-to-one.)
+1. Modules have a one-to-many relationship with operations. Each module provides capacity for one or more operations, and each operation belongs to exactly one module.
 2. Although described here in terms of individual units, modules are implemented as a continuous "capacity" value.
 3. A module's capacity can be shifted ("reconfigured") among its enabled operations. E.g., Combustion Power Plants (which really represents a capacity of combustion plants) could be shifted from 70% Coal Power / 30% Methane Power to 40/60 over time. Speed and cost of reconfiguration are fixed properties of each module. This could represent anything from a major refitting/retooling/relocation to a minor operational adjustment, depending on the module.
 
@@ -41,9 +41,9 @@ Notes:
 - **Quarries** — Surface extraction operations for bulk stone and loose regolith, producing construction aggregate, dimension stone, and industrial or ISRU feedstock.
 - **Atmosphere Processors** — Cryogenic distillation, pressure-swing adsorption, membrane separation, or centrifugal processing plants for separating target gases from planetary atmospheres. On gas giants, represent atmospheric skimming or balloon-based harvesting systems.
 - **Volatiles Extraction Plants** — Thermal processing, sublimation trapping, and mechanical extraction facilities for recovering water, carbon dioxide, ammonia, and other volatile species from ice deposits, permafrost, regolith, and brine reservoirs.
-- **Hydrocarbon Harvesters** — Surface collection and primary separation infrastructure for liquid hydrocarbon bodies, principally Titan's methane–ethane seas.
-- **Desalination Plants** — Reverse osmosis, multi-stage flash distillation, or electrodialysis facilities producing fresh water from seawater, brackish water, or brine. On ocean worlds, applicable to melt-probe or plume-sourced water.
-- **Brine Processing Plants** — Selective ion exchange, fractional crystallization, solvent extraction, and evaporation facilities for recovering dissolved minerals and salts from ocean water, desalination reject, and subsurface brines.
+- **Hydrocarbon Processors** — Surface collection and primary separation infrastructure for liquid hydrocarbon bodies, principally Titan's methane–ethane seas.
+- **Desalination Plants** — Reverse osmosis, multi-stage flash distillation, or electrodialysis facilities producing fresh water from seawater, brackish water, or brine, with integrated mineral recovery from concentrated reject brine. On ocean worlds, applicable to melt-probe or plume-sourced water.
+- **Brine Processing Plants** — Selective ion exchange, fractional crystallization, solvent extraction, and evaporation facilities for recovering dissolved minerals and salts from subsurface brines and inland saline water bodies.
 
 
 ## Refining
@@ -83,7 +83,8 @@ Notes:
 ## Manufacturing
 
 - **Construction Yards** — On-site assembly, civil engineering, and installation capacity for fixed infrastructure including buildings, roads, tunnels, landing pads, launch facilities, power distribution networks, pipelines, pressurized habitats, and radiation shielding.
-- **Transport Factories & Yards** — Large-scale fabrication and final assembly facilities for ground vehicles, aircraft, marine vessels, spacecraft, EVA mobility units, and spacesuits, integrating structural, propulsion, avionics, and life-support subsystems.
+- **Space Yards** — Dedicated yard facilities for fabrication and final assembly of heavy-lift launch vehicles and large interplanetary transports, analogous to naval shipyards. Encompasses heavy tooling, large-bay construction halls, and orbital or surface assembly infrastructure.
+- **Transport Factories** — Large-scale fabrication and final assembly facilities for ground vehicles, aircraft, marine vessels, small-to-medium spacecraft, EVA mobility units, and spacesuits, integrating structural, propulsion, avionics, and life-support subsystems.
 - **Metal Fabrication Works** — Cutting, welding, forming, machining, galvanizing, and assembly facilities for steel and aluminium structural products including beams, plate, pipe, pressure vessels, extrusions, and prefabricated modules.
 - **Composites Facilities** — Fiber-reinforced polymer and metal-matrix composite fabrication and assembly facilities for layup, filament winding, pultrusion, curing, and integration of composite materials into panels, overwrapped pressure vessels, fairings, and inflatable habitat shells.
 - **Textiles Mills** — Weaving, knitting, and coating facilities for high-performance fabrics including aramid, UHMWPE, carbon-fiber cloth, PTFE membranes, multilayer insulation blankets, filtration media, and spacesuit soft goods.

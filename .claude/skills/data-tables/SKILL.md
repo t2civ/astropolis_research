@@ -35,6 +35,8 @@ Standard abbreviations:
 
 Examples: Helium-3 -> HELIUM_3, ³He-³He Fusion Power -> 3HE_3HE_FUSION_POWER, Industrial Recycling & Incineration -> INDUST_RECYC_INCINERATION. During table import, entity names are prefixed with type identifiers such as "RESOURCE_", "OPERATION_", etc.
 
+The file `text/entities.csv` maps prefixed entity IDs to their human-readable display names. When adding new table entities, add corresponding entries to `entities.csv`.
+
 
 ## Data Types
 
