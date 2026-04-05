@@ -5,7 +5,7 @@ Strata are volumes of natural or artificial bodies that have defined resource co
 
 ## Fields
 
-- name — See Name Construction below.
+- name (1st column) — See Name Construction below.
 - generic_body_class — Empty unless generic strata.
 - body — Non-generic strata only. Body type (e.g., PLANET, MOON, ASTEROID) followed by body name (usually the section name in strata.md; for Small/Undifferentiated Bodies section, extract body name from the item name). Examples: PLANET_EARTH, MOON_MOON, PLANET_MARS, MOON_PHOBOS.
 - body_radius — Mean radius of the body (to sea level or other standard reference).
@@ -43,6 +43,7 @@ The `name` field is constructed as follows:
 4. Don't worry too much about getting survey_level exactly right; these will be cross-calibrated after we have all strata.
 5. Resource compositions of strata are defined in strata_resources.tsv.
 
+
 ## Tests
 
 Verify within rounding error:
@@ -58,4 +59,3 @@ Verify within rounding error:
   - Thin shell approximation (if thickness <= 1% of inner_radius): volume = area × thickness
   - Sphere shell (if thickness > 1% of inner_radius): volume = spherical_fraction × 4π/3 × (outer_radius^3 - inner_radius^3)
 3. mass = volume × density.
-

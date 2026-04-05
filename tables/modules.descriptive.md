@@ -4,22 +4,20 @@ Modules are the physical infrastructure that implement operations.
 
 Notes:
 
-1. Modules can have a many-to-many relationship with operations. Each module provides capacity for one or more operations. Each operation is enabled by one or more modules. (In practice, many specific cases are one-to-one.)
+1. Modules have a one-to-many relationship with operations. Each module provides capacity for one or more operations, and each operation belongs to exactly one module.
 2. Although described here in terms of individual units, modules are implemented as a continuous "capacity" value.
-3. A module's capacity can be shifted ("converted") among its enabled operations. E.g., Combustion Power Plants (which really represents a capacity of combustion plants) could be shifted from 70% Coal Power / 30% Methane Power to 40/60 over time. Speed and cost of conversion are fixed properties of each module. This could represent anything from a major refitting/retooling/relocation to a minor operational adjustment, depending on the module.
+3. A module's capacity can be shifted ("reconfigured") among its enabled operations. E.g., Combustion Power Plants (which really represents a capacity of combustion plants) could be shifted from 70% Coal Power / 30% Methane Power to 40/60 over time. Speed and cost of reconfiguration are fixed properties of each module. This could represent anything from a major refitting/retooling/relocation to a minor operational adjustment, depending on the module.
 
 
 ## Energy
 
-- **Solar Farms** — Utility-scale photovoltaic and concentrated solar thermal installations. Primary power sources across the inner solar system. Concentrated solar thermal variants may provide facility or district heat.
-- **Solar Arrays** — Distributed and small-scale photovoltaic systems including rooftop, building-integrated, and portable deployments. Represent aggregate capacity of many individual installations.
+- **Solar Arrays** — Photovoltaic and concentrated solar thermal installations at all scales, from utility-scale solar farms to rooftop and building-integrated deployments. Primary power sources across the inner solar system. Concentrated solar thermal variants may provide facility or district heat.
 - **Geothermal Plants** — Power stations extracting heat from planetary interiors via hydrothermal wells or engineered hot-rock systems. Applicable on Earth and tidally heated bodies. May provide facility or district heat.
 - **Hydroelectric Dams** — River impoundment or run-of-river hydropower installations.
 - **Wind Farms** — Utility-scale wind turbine arrays, onshore or offshore. Applicable on Earth, Mars, Venus upper atmosphere, and Titan.
 - **Tidal Power Stations** — Tidal barrage or tidal stream turbine installations exploiting gravitational tidal forcing. Earth-only under foreseeable conditions.
 - **Combustion Power Plants** — Utility-scale thermal power stations with boilers and gas turbines for burning hydrogen, methane, methanol, ethanol, liquid hydrocarbons, oil, or coal to generate electricity. May provide facility or district heat.
-- **Utility Fuel Cells** — Centralized stationary fuel cell installations operating on hydrogen, methane, or methanol for grid-scale or large-facility power. May provide facility or district heat.
-- **Distributed Fuel Cells** — Small-scale fuel cell units for buildings, vehicles, and remote installations, operating on hydrogen, methane, or methanol. Represent aggregate capacity of many individual units. May provide facility heat.
+- **Fuel Cells** — Stationary fuel cell installations at all scales, from centralized grid-scale plants to small units for buildings, vehicles, and remote installations, operating on hydrogen, methane, or methanol. May provide facility or district heat.
 - **LEU Nuclear Plants** — Light-water or heavy-water reactor power stations operating on low-enriched uranium fuel. May provide facility or district heat.
 - **HEU Nuclear Reactors** — Compact high-enrichment uranium reactors for naval propulsion, space power, and other applications requiring high power density at small scale. May provide facility heat.
 - **Thorium Nuclear Plants** — Thermal-breeder reactor power stations operating on thorium-cycle fuel with in-situ breeding of fissile uranium-233. May provide facility or district heat.
@@ -43,9 +41,9 @@ Notes:
 - **Quarries** — Surface extraction operations for bulk stone and loose regolith, producing construction aggregate, dimension stone, and industrial or ISRU feedstock.
 - **Atmosphere Processors** — Cryogenic distillation, pressure-swing adsorption, membrane separation, or centrifugal processing plants for separating target gases from planetary atmospheres. On gas giants, represent atmospheric skimming or balloon-based harvesting systems.
 - **Volatiles Extraction Plants** — Thermal processing, sublimation trapping, and mechanical extraction facilities for recovering water, carbon dioxide, ammonia, and other volatile species from ice deposits, permafrost, regolith, and brine reservoirs.
-- **Hydrocarbon Harvesters** — Surface collection and primary separation infrastructure for liquid hydrocarbon bodies, principally Titan's methane–ethane seas.
-- **Desalination Plants** — Reverse osmosis, multi-stage flash distillation, or electrodialysis facilities producing fresh water from seawater, brackish water, or brine. On ocean worlds, applicable to melt-probe or plume-sourced water.
-- **Brine Processing Plants** — Selective ion exchange, fractional crystallization, solvent extraction, and evaporation facilities for recovering dissolved minerals and salts from ocean water, desalination reject, and subsurface brines.
+- **Hydrocarbon Processors** — Surface collection and primary separation infrastructure for liquid hydrocarbon bodies, principally Titan's methane–ethane seas.
+- **Desalination Plants** — Reverse osmosis, multi-stage flash distillation, or electrodialysis facilities producing fresh water from seawater, brackish water, or brine, with integrated mineral recovery from concentrated reject brine. On ocean worlds, applicable to melt-probe or plume-sourced water.
+- **Brine Processing Plants** — Selective ion exchange, fractional crystallization, solvent extraction, and evaporation facilities for recovering dissolved minerals and salts from subsurface brines and inland saline water bodies.
 
 
 ## Refining
@@ -85,7 +83,8 @@ Notes:
 ## Manufacturing
 
 - **Construction Yards** — On-site assembly, civil engineering, and installation capacity for fixed infrastructure including buildings, roads, tunnels, landing pads, launch facilities, power distribution networks, pipelines, pressurized habitats, and radiation shielding.
-- **Transport Factories & Yards** — Large-scale fabrication and final assembly facilities for ground vehicles, aircraft, marine vessels, spacecraft, EVA mobility units, and spacesuits, integrating structural, propulsion, avionics, and life-support subsystems.
+- **Space Yards** — Dedicated yard facilities for fabrication and final assembly of heavy-lift launch vehicles and large interplanetary transports, analogous to naval shipyards. Encompasses heavy tooling, large-bay construction halls, and orbital or surface assembly infrastructure.
+- **Transport Factories** — Large-scale fabrication and final assembly facilities for ground vehicles, aircraft, marine vessels, small-to-medium spacecraft, EVA mobility units, and spacesuits, integrating structural, propulsion, avionics, and life-support subsystems.
 - **Metal Fabrication Works** — Cutting, welding, forming, machining, galvanizing, and assembly facilities for steel and aluminium structural products including beams, plate, pipe, pressure vessels, extrusions, and prefabricated modules.
 - **Composites Facilities** — Fiber-reinforced polymer and metal-matrix composite fabrication and assembly facilities for layup, filament winding, pultrusion, curing, and integration of composite materials into panels, overwrapped pressure vessels, fairings, and inflatable habitat shells.
 - **Textiles Mills** — Weaving, knitting, and coating facilities for high-performance fabrics including aramid, UHMWPE, carbon-fiber cloth, PTFE membranes, multilayer insulation blankets, filtration media, and spacesuit soft goods.

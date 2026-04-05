@@ -17,6 +17,7 @@ The purpose of this repository is to collect descriptive information, develop ab
 - Simulation input is formatted as data tables in tab-delimited (.tsv) files in the `tables` directory.
 - Table-specific field definitions and table notes live in `*.schema.md` files alongside their tables (e.g., `operations.schema.md` next to `operations.tsv`).
 - Table-specific entity descriptions and entity notes live in `*.descriptive.md` files alongside their tables (e.g., `operations.descriptive.md` next to `operations.tsv`). In these files, entity groupings are organizational only and have no functional effect in the simulation.
+- The `text/` directory contains translation files. `entities.csv` maps table entity IDs to display names (columns: `id`, plus language codes like `en`).
 
 
 ## General Instructions

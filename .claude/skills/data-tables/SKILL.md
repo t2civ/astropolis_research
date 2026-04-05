@@ -35,6 +35,8 @@ Standard abbreviations:
 
 Examples: Helium-3 -> HELIUM_3, ³He-³He Fusion Power -> 3HE_3HE_FUSION_POWER, Industrial Recycling & Incineration -> INDUST_RECYC_INCINERATION. During table import, entity names are prefixed with type identifiers such as "RESOURCE_", "OPERATION_", etc.
 
+The file `text/entities.csv` maps prefixed entity IDs to their human-readable display names. When adding new table entities, add corresponding entries to `entities.csv`.
+
 
 ## Data Types
 
@@ -59,10 +61,10 @@ Types are specified per field (DB-style) or per table (Entity x Entity):
 - Follow existing patterns in tables that already exist.
 
 
-## Skipping Rows and Columns
+## Non-Imported Rows and Columns
 
-- Rows starting with # are skipped by the importer.
-- Columns where the 1st row item starts with # are skipped.
+- Rows starting with # are not imported.
+- Columns where the 1st row item starts with # are not imported.
 
 
 ## DB-Style Table Format
@@ -91,4 +93,4 @@ Types are specified per field (DB-style) or per table (Entity x Entity):
 
 1. For columns without instructions (not described in prompt or schema), leave empty when creating new items or copy existing values when modifying.
 2. When adding to or modifying an existing table, follow patterns and conventions already used in the table.
-3. **Column count consistency:** Every row in a TSV table must have the same number of tab-separated columns as the header row. When editing a row, always preserve trailing tabs for empty columns. The Edit tool strips trailing whitespace, so after editing TSV rows, verify column counts with `awk -F'\t' '{if(NF<EXPECTED) print NR": "NF" cols"}' <file>` and fix any short rows by appending the missing tabs via `sed`.
+3. Verify that non-empty data are added in the correct table columns. **Misaligned columns are a common mistake in tables with internal empty cells.** Verify that data rows have number of tab delimiters equal to or less than the table's header row; fewer is OK if there are empty data cells on the right-hand side.

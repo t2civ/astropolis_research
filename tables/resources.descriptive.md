@@ -1,6 +1,6 @@
 # Resources (Descriptive)
 
-Resources are physical and intangible abstractions that are extracted, converted, consumed, stored, transported, and/or traded in the simulation.
+Resources are items that are extracted, converted, consumed, stored, transported, and/or traded in the simulation, including tangibles and intangibles. Many are abstracted categories that represent a basket of different items in the real world.
 
 Notes:
 
