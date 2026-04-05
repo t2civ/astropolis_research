@@ -28,4 +28,4 @@ Simulation start facilities:
 - **ISS Roscosmos** — The Russian Orbital Segment, including the Zarya and Zvezda service modules with their own supplementary solar panels.
 - **ISS ESA** — The European contribution, centered on the Columbus laboratory module. Draws power from the station's shared systems.
 - **ISS JAXA** — Japan's contribution, centered on the Kibo laboratory and its exposed experiment facility. Draws power from the station's shared systems.
-- **Tiangong CNSA** — China's space station. Note: the simulation treats this as one existing station from start (2015) onward. The reference body is Tiangong Space Station, but it is abstracted to also represent Tiangong-1.
+- **Tiangong CNSA** — China's space station. Note: China's modular space station, fully operational since 2022. The reference body is Tiangong Space Station.

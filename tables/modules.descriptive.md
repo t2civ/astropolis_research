@@ -29,15 +29,15 @@ Notes:
 
 ## Extraction
 
-- **Drilling Rigs (surface)** — Well drilling and completion equipment for gaseous and liquid hydrocarbon extraction from surface-accessible formations to approximately 100 m depth on land.
-- **Drilling Rigs (near-surface)** — Well drilling and completion equipment for hydrocarbon extraction from formations at approximately 0.1–0.5 km depth, including offshore continental shelf.
-- **Drilling Rigs (subsurface)** — Well drilling and completion equipment for hydrocarbon extraction from formations at approximately 0.5–2.0 km depth.
-- **Drilling Rigs (deep subsurface)** — Well drilling and completion equipment for hydrocarbon extraction from formations at approximately 2.0–5.0 km depth.
-- **Drilling Rigs (extreme subsurface)** — Well drilling and completion equipment for hydrocarbon extraction from formations at approximately 5.0–12.0 km depth.
 - **Mines (surface)** — Open-pit, strip, and placer mining capacity for solid resource extraction from surface strata to approximately 100 m depth. Target ore proportions adjustable over time.
 - **Mines (near-surface)** — Underground and deep open-pit mining capacity for strata at approximately 0.1–0.5 km depth, including sub-seafloor operations on continental shelves.
 - **Mines (subsurface)** — Underground mining capacity for strata at approximately 0.5–2.0 km depth.
 - **Mines (deep subsurface)** — Underground mining capacity for deep strata at approximately 2.0–5.0 km depth.
+- **Wells (surface)** — Well drilling and completion equipment for gaseous and liquid hydrocarbon extraction from surface-accessible formations to approximately 100 m depth on land.
+- **Wells (near-surface)** — Well drilling and completion equipment for hydrocarbon extraction from formations at approximately 0.1–0.5 km depth, including offshore continental shelf.
+- **Wells (subsurface)** — Well drilling and completion equipment for hydrocarbon extraction from formations at approximately 0.5–2.0 km depth.
+- **Wells (deep subsurface)** — Well drilling and completion equipment for hydrocarbon extraction from formations at approximately 2.0–5.0 km depth.
+- **Wells (extreme subsurface)** — Well drilling and completion equipment for hydrocarbon extraction from formations at approximately 5.0–12.0 km depth.
 - **Quarries** — Surface extraction operations for bulk stone and loose regolith, producing construction aggregate, dimension stone, and industrial or ISRU feedstock.
 - **Atmosphere Processors** — Cryogenic distillation, pressure-swing adsorption, membrane separation, or centrifugal processing plants for separating target gases from planetary atmospheres. On gas giants, represent atmospheric skimming or balloon-based harvesting systems.
 - **Volatiles Extraction Plants** — Thermal processing, sublimation trapping, and mechanical extraction facilities for recovering water, carbon dioxide, ammonia, and other volatile species from ice deposits, permafrost, regolith, and brine reservoirs.
