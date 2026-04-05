@@ -6,12 +6,13 @@ Modules are described in `modules.descriptive.md`.
 ## Fields
 
 - name (1st column) — Module name per data table instructions. For extraction modules, the name is constructed with the `stratum_group` value as a prefix, e.g., `CONT_SURFACE_MINES`, `OCEAN_DESALINATION_PLANTS`, `ATMOSPHERE_PROCESSORS`.
-- operations — Operations that the module provides capacity for. Each operation belongs to exactly one module (one-to-many relationship from modules to operations).
+- op_class — GUI only category for operations display.
 - reconfig_time — Required time in days (d) to fully reconfigure a module from one operation (100%) to another (100%).
 - reconfig_cost — Required cost in USD millions ($M) to fully reconfigure a module from one operation (100%) to another (100%).
 - biological_crew — The module provides life support for this number of human personnel (CREW_SYSTEMS only). 
 - carrying_capacity — The module can support a "population" (as opposed to crew only) of this size. Populations are more permanent than crews and have intrinsic growth dynamics.
 - carrying_capacity_group — Leave as HUMAN.
+- operations — Operations that the module provides capacity for. Each operation belongs to exactly one module (one-to-many relationship from modules to operations).
 
 
 ## Notes
