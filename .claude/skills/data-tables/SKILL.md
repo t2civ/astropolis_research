@@ -74,8 +74,13 @@ Types are specified per field (DB-style) or per table (Entity x Entity):
   - `Type` (required): data type for the column
   - `Unit` (optional): default unit for FLOAT/VECTORx/ARRAY[FLOAT] columns (overridable per cell)
   - `Default` (optional): default value for empty cells
-  - `Prefix` or `Prefix/<1st column prefix>` (optional): string prefix for values; the latter form prefixes 1st column entity names
+  - `Prefix` or `Prefix/<1st_column_prefix>` (optional): string prefix for values; the latter form prefixes 1st column entity names
 - Data rows follow, each starting with the row entity name.
+
+
+## Enumeration-Only Format
+
+Single column table for inclusion of table entities without data, usually defining "classes" or "groups" used in other tables. First row is `Prefix/<column_prefix>`, where `column_prefix` specifies a prefix for all subsequent row entities.
 
 
 ## Entity x Entity Table Format
