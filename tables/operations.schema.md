@@ -28,12 +28,19 @@ These fields are used only if `process_group` is `EXTRACTION`.
 
 ## Conversion Fields
 
-These fields are used only if `process_group` is `CONVERSION`.
+These fields are used only if `process_group` is `CONVERSION`. All lists are semicolon-delimited.
 
-- input_resources — A semicolon-delimited list of input resources for the operation.
-- input_rates — A semicolon-delimited list of input resource rates (in t/h) for the operation.
-- output_resources — A semicolon-delimited list of output resources for the operation.
-- output_rates — A semicolon-delimited list of output resource rates (in t/h) for the operation.
+- in_inventory — Input resources from inventory.
+- in_inventory_rates — Input resource rates (t/h) from inventory.
+- in_atmos — Input resources from atmosphere.
+- in_atmos_rates — Input resource rates (t/h) from atmosphere.
+- out_inventory — Output resources to inventory.
+- out_inventory_rates — Output resource rates (t/h) to inventory.
+- out_atmos — Output resources to atmosphere.
+- out_atmos_rates — Output resource rates (t/h) to atmosphere.
+- out_surface — Output resources to surface. Often WATER.
+- out_surface_rates — Output resource rates (t/h) to surface.
+- closed_cycle_factor — Energy multiplier factor to run operation as closed cycle, i.e., all inputs and outputs are from and to inventory.
 - mass_flow — Equals the sum of input_rates equals the sum of output_rates, within rounding precision. Note: the column header in `operations.tsv` is currently `mass_conversion`; the name discrepancy will be resolved in a future update.
 - fuel_rate — Energy group operations only. Total input rate excluding OXYGEN.
 
@@ -53,12 +60,13 @@ When not otherwise constrained, prefer normalization of Energy group operations 
 5. Use catchall resources as needed. E.g., if an operation in the real-world requires 1 kg/h of lithium, use 1 kg/h of INDUSTRIAL_METALS.
 6. For chemical conversions, consider only stoichiometric quantities for inputs and outputs. For fabricated/manufactured items, consider product composition and subtractive processes (the latter producing INDUSTRIAL_WASTE, REGOLITH, etc.).
 7. Don't consider plant maintenance or repair parts used to run the operation; that will be handled separately.
-8. Consider inputs and outputs as a net reaction. I.e., don't have the same resource as input and output.
+8. Consider inputs and outputs as a net reaction within each stream. A resource must not appear in both `in_inventory` and `out_inventory`. Resources may appear in different streams (e.g., WATER from `in_inventory` and WATER to `out_surface`).
 9. Operation energy including process heat should usually come from electricity rather than other sources such as fuel combustion (this is a model simplification). Exceptions: cases where energy is derived directly from operation inputs, such as CARBON and OXYGEN in BASIC_O2_STEELMAKING (in this case electricity accounts for auxiliary requirements); cases where direct solar energy is explicitly used for heat (tracked in the solar column).
-10. Don't worry about water use in industrial processes, except as a stoichiometric input or output.
-11. Don't worry about the source of input resources (e.g., OXYGEN from atmosphere versus purified supply) or the fate of output resources (e.g., collected versus exhaust). An amendment is that you can consider alternative compositions and how they might be more useful or less harmful. E.g., you could consider outputting SULFUR rather than SULFUR_DIOXIDE from COAL_POWER.
+10. Include industrial process water (washing, quenching, slurry transport, wet processing) as WATER input from inventory and output to surface. Do not include cooling water for thermal management (covered by the heat/efficiency model). Include stoichiometric water as before.
+11. Define operations as "open" by assigning atmospheric inputs (`in_atmos`) and atmospheric/surface outputs (`out_atmos`, `out_surface`) where the open-cycle form is the natural baseline. Oxygen consumed in combustion and similar reactions should come from atmosphere (`in_atmos`). Gaseous waste products (CO₂, water vapor) should go to atmosphere (`out_atmos`). Industrial wastewater should go to surface (`out_surface`). The `closed_cycle_factor` captures the energy multiplier for running fully closed. For operations where the open/closed difference is negligible, keep the operation fully closed (`closed_cycle_factor` = 1).
 12. Be forward looking if the particular operation is not well constrained (as stated above for efficiency).
 13. Report if you find major gaps in the operations list or associated lists.
+14. The `closed_cycle_factor` is applied as a simple multiplier to `electricity` and `heat`. It accounts for energy to: (a) obtain atmospheric inputs from cryogenic/solid inventory, (b) capture and process gaseous outputs for inventory storage, (c) purify and recycle wastewater instead of discharging to surface. Approximate energy costs per kg for closing streams: O₂ cryogenic handling ~0.25 MJ/kg, CO₂ capture/storage ~0.20 MJ/kg, H₂O vapor condensation/freeze ~0.10 MJ/kg, N₂ cryogenic handling ~0.25 MJ/kg, process water freeze/thaw cycle ~0.10 MJ/kg.
 
 
 ## Energy Balance

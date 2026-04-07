@@ -9,7 +9,8 @@ Facilities are described in `facilities.descriptive.md`. Content of this table i
 - is_start — Always TRUE (by default).
 - body — Simulation body.
 - player — Owning or controlling player.
-- is_unitary — TRUE ("x") if the facility can be treated as one activity for economic accounting. If false, each operation is treated as a separate activity for internal mechanics like taxation and gross product calculation.
+- is_unitary — True ("x") if the facility can be treated as one activity for economic accounting. If false, each operation is treated as a separate activity for internal mechanics like taxation and gross product calculation.
+- closed_cycle_ops — True ("x") if the facility runs operations in a "closed cycle"; i.e., resource streams are entirely from and to inventory.
 - public_sector — Fraction of economic activity that is public sector. For unitary facilities, this is usually 1 (agencies) or 0 (companies).
 - population — Population or personnel count in 2025. For national polities, this is total national population. For agencies, this includes direct employees and the contractor/support workforce.
 - #2025 — Population or personnel count in 2025 (for sim calibration, not imported).
